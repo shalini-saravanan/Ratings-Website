@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Rate - Home</title>
+    <title>Travel - Ratings</title>
 
     <!-- SEO Meta Tags -->
     <meta name="description" content="Ratings Site - RAFANIEL CHRISTEN TECHNOLOGIES">
@@ -18,12 +18,13 @@
     <link rel="manifest" href="assets/favicon/site.webmanifest">
     <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#6366f1">
     <link rel="shortcut icon" href="assets/favicon/favicon.ico">
-    <meta name="msapplication-TileColor" content="#080032">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <meta name="msapplication-TileColor" content="#112d32">
     <meta name="theme-color" content="#ffffff">
 
-    <!-- Vendor Styles -->
+    <!--Style sheet -->
     <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css"/>
-    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css"/>
 
     <!-- Main Theme Styles + Bootstrap -->
     <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
@@ -117,7 +118,11 @@
         root.classList.remove('dark-mode');
       }
     </script>
-
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script language="JavaScript" src="assets/js/functions.js"></script>
     <!-- Page loading scripts -->
     <script>
       (function () {
@@ -134,9 +139,10 @@
   </head>
 
 
-  <!-- Body -->
-  <body>
-    
+
+<!-- Body -->
+<body>
+  
     <!-- Page loading spinner -->
     <div class="page-loading active">
       <div class="page-loading-inner">
@@ -187,97 +193,122 @@
       </header>
 
 
-      <!-- Page container -->
-      <section class="position-relative pt-5 py-lg-5 mt-3 mt-md-4">
-
-        <!-- Swiper tabs (Project images) -->
-        <div class="swiper-tabs position-md-absolute top-0 end-0 w-md-50 h-100">
-          <div id="project-1" class="swiper-tab position-md-absolute w-100 h-100 bg-position-center bg-repeat-0 bg-size-cover active" style="background-image: url(assets/img/slider/01.jpg);">
-            <div class="ratio ratio-1x1"></div>
-          </div>
-          <div id="project-2" class="swiper-tab position-md-absolute w-100 h-100 bg-position-center bg-repeat-0 bg-size-cover" style="background-image: url(assets/img/slider/02.jpg);">
-            <div class="ratio ratio-1x1"></div>
-          </div>
-          <div id="project-3" class="swiper-tab position-md-absolute w-100 h-100 bg-position-center bg-repeat-0 bg-size-cover" style="background-image: url(assets/img/slider/03.jpg);">
-            <div class="ratio ratio-1x1"></div>
-          </div>
-        </div>
+      <!-- Breadcrumb -->
+      <nav class="container mt-lg-4 pt-5" aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0 pt-5">
+          <li class="breadcrumb-item">
+            <a href="index.html"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">Ratings</li>
+        </ol>
+      </nav>
 
 
-        <div class="container pt-1 pt-lg-2">
-          <div class="row">
-            <div class="col-lg-5 col-md-6">
-              
-              <!-- Project description (Slider) -->
-              <div class="d-none d-lg-block" style="height: 160px;"></div>
-              <div class="d-none d-md-block d-lg-none" style="height: 80px;"></div>
-              <div class="swiper pt-4 pt-md-0" data-swiper-options='{
-                "spaceBetween": 30,
-                "loop": true,
-                "tabs": true,
-                "pagination": {
-                  "el": ".swiper-pagination",
-                  "type": "fraction"
-                },
-                "navigation": {
-                  "prevEl": ".btn-prev",
-                  "nextEl": ".btn-next"
-                }
-              }'>
-                <div class="swiper-wrapper">
+      <!-- Page content -->
+      <section class="container mt-4 mb-2 mb-md-4 mb-lg-5 pt-lg-2 pb-5">
 
-                  <!-- Item -->
-                  <div class="swiper-slide" data-swiper-tab="#project-1">
-                    <h2 class="h1 mb-4">RATE THE WORLD!</h2>
-                    <p class="pb-3 mb-3">Make a perfect plan by choosing the top ranked tourist spots, hotels and amny other things. </p>
-                    <table class="mb-5">
-                      <tbody>
-                        <tr>
-                          <th class="pb-2">Travel Destinations</td>
-                        </tr>
-                        <tr>
-                          <th class="pb-2">Hotels</td>
-                        </tr>
-                        <tr>
-                          <th class="pb-2">Foods</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-
-                  <!-- Item -->
-                  <div class="swiper-slide" data-swiper-tab="#project-2">
-                    <h2 class="h1 mb-4">See what tops the list!</h2>
-                    <p class="pb-3 mb-3">Comapare the rankings and ratings of the thuings, analyse it and make your decisions wiser!</p>
-                    <a href="progress.html" class="btn btn-primary shadow-primary mt-n2">View Ratings</a>
-                  </div>
-
-                  <!-- Item -->
-                  <div class="swiper-slide" data-swiper-tab="#project-3">
-                    <h2 class="h1 mb-4">EXPLORE the World!</h2>
-                    <p class="pb-3 mb-3">Pick your best choice from the vast choices. Explore the top trends that u need to knmow!</p>
-                    
-                    <a href="progress.html" class="btn btn-primary shadow-primary mt-n2">View Ratings</a>
-                  </div>
-                </div>
-                
-                <!-- Prev / Next buttons + Counter -->
-                <div class="d-flex align-items-center ps-2 pb-5">
-                  <button type="button" class="btn btn-prev btn-icon btn-sm position-static">
-                    <i class="bx bx-chevron-left"></i>
-                  </button>
-                  <div class="swiper-pagination position-static w-auto mx-3" style="min-width: 30px;"></div>
-                  <button type="button" class="btn btn-next btn-icon btn-sm position-static">
-                    <i class="bx bx-chevron-right"></i>
-                  </button>
-                </div>
-              </div>
+        <!-- Page title + Layout switcher -->
+        <div class="d-flex align-items-center justify-content-between mb-4 pb-1 pb-md-3">
+            <h1 class="mb-0">Tourist Destinations</h1>
+            <div class="d-flex align-items-center ms-sm-4 ms-3">
+              <a href="travel.html" class="btn btn-primary btn-sm fs-sm rounded d-lg-inline-flex">
+                <i class="bx bx-expand fs-5 lh-1 me-1"></i>
+                &nbsp; Details
+              </a>
             </div>
           </div>
+        
+        <div class = "row">
+        <div id = "itemContainer" class="col-xl-9 col-lg-8 tab-pane fade show active" role="tabpanel">
+        <!-- Item -->
+        <div class="fs-sm mb-2"><a class="badge fs-sm text-nav bg-secondary text-decoration-none">#1 </a><strong>South Island, Newzealand</strong>
+            <div class="progress mb-3">
+              <div class="progress-bar bg-gradient-primary" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+            </div>
         </div>
+        <div class="fs-sm mb-2"><a class="badge fs-sm text-nav bg-secondary text-decoration-none">#1 </a><strong>South Island, Newzealand</strong>
+            <div class="progress mb-3">
+              <div class="progress-bar bg-gradient-primary" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+            </div>
+        </div>
+        <div class="fs-sm mb-2"><a class="badge fs-sm text-nav bg-secondary text-decoration-none">#2 </a><strong>Paris, France</strong>
+            <div class="progress mb-3">
+              <div class="progress-bar bg-gradient-primary" role="progressbar" style="width: 93%" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100">93%</div>
+            </div>
+        </div>
+        <div class="fs-sm mb-2"><a class="badge fs-sm text-nav bg-secondary text-decoration-none">#3 </a><strong>Rome, Italy</strong>
+            <div class="progress mb-3">
+              <div class="progress-bar bg-gradient-primary" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+            </div>
+        </div>
+        <div class="fs-sm mb-2"><a class="badge fs-sm text-nav bg-secondary text-decoration-none">#4 </a><strong>New York</strong>
+            <div class="progress mb-3">
+              <div class="progress-bar bg-gradient-primary" role="progressbar" style="width: 87%" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100">87%</div>
+            </div>
+        </div>
+        <div class="fs-sm mb-2"><a class="badge fs-sm text-nav bg-secondary text-decoration-none">#5 </a><strong>Bali, Indonesia</strong>
+            <div class="progress mb-3">
+              <div class="progress-bar bg-gradient-primary" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+            </div>
+        </div>
+        <div class="fs-sm mb-2"><a class="badge fs-sm text-nav bg-secondary text-decoration-none">#6 </a><strong>South Island, Newzealand</strong>
+            <div class="progress mb-3">
+              <div class="progress-bar bg-gradient-primary" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+            </div>
+        </div>
+        <div class="fs-sm mb-2"><a class="badge fs-sm text-nav bg-secondary text-decoration-none">#7 </a><strong>Bali, Indonesia</strong>
+            <div class="progress mb-3">
+              <div class="progress-bar bg-gradient-primary" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+            </div>
+        </div>
+        <div class="fs-sm mb-2"><a class="badge fs-sm text-nav bg-secondary text-decoration-none">#8 </a><strong>Bali, Indonesia</strong>
+            <div class="progress mb-3">
+              <div class="progress-bar bg-gradient-primary" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+            </div>
+        </div>
+         
+          </div>
+          
+          <aside class="col-xl-3 col-lg-4">
+              <div class = "gallery">
+              <div class="gallery-item rounded-3  mb-3" >
+              <img src="./assets/img/slider/02.jpg" alt="Gallery thumbnail" >
+              <div class="gallery-item-caption fs-sm fw-medium">Top Travel Destinations</div>
+          </div>
+          <div class="gallery-item rounded-3  mb-3" >
+            <img src="./assets/img/slider/01.jpg" alt="Gallery thumbnail">
+            <div class="gallery-item-caption fs-sm fw-medium">Top Travel Destinations</div>
+        </div>
+        </div>
+          
+        </aside>
+        </div>
+         <!-- Pagination -->
+        <ul>
+            <div class="holder pagination justify-content-center pt-lg-3 pt-1">
+            <li class="page-item">
+              <a class="page-link">
+                <i class="bx bx-chevron-left mx-n1"></i>
+              </a>
+            </li>
+            <li class="page-item active d-none d-sm-block" aria-current="page">
+              <span class="page-link">1
+                <span class="visually-hidden"></span>
+              </span>
+            </li>
+            <li class="page-item">
+              <a class="page-link">
+                <i class="bx bx-chevron-right mx-n1"></i>
+              </a>
+            </li>
+        </div>
+          </ul>
+        
       </section>
+
     </main>
 
+    
 
     <!-- Footer -->
     <footer class="footer dark-mode bg-dark pt-5 pb-4 pb-lg-5">
@@ -285,7 +316,7 @@
         <div class="row pb-5">
           <div class="col-lg-4 col-md-6">
             <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
-              <img src="assets/img/logo.svg" width="47" alt = "">
+              <img src="assets/img/logo.svg" width="47"  alt = "">
               RATE
             </div>
             <p class="fs-sm text-light opacity-70 pb-lg-3 mb-4">Find the best things in the world. E X P L O R E the world with us! </p>
@@ -321,11 +352,10 @@
       <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
     </a>
 
-
+    
     <!-- Vendor Scripts -->
     <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
     <!-- Main Theme Script -->
     <script src="assets/js/theme.min.js"></script>

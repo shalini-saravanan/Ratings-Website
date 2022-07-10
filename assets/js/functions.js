@@ -2,7 +2,7 @@
 $(function () {
   $("div.holder").jPages({
     containerID: "itemContainer",
-    perPage: 3,
+    perPage: 10,
   });
   $("select").change(function () {
     var newPerPage = parseInt($(this).val());

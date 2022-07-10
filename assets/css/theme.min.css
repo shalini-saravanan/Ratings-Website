@@ -14291,7 +14291,7 @@ a.badge {
   font-size: var(--si-gallery-image-indicator-font-size);
   text-align: center;
   line-height: var(--si-gallery-indicator-size);
-  content: "";
+  content: "";
   z-index: 5;
 }
 .gallery-item .gallery-item-caption {
@@ -14319,23 +14319,7 @@ a.badge {
   transform: none;
   opacity: 1;
 }
-.gallery-item.video-item::after {
-  padding-top: 0.0625rem;
-  padding-left: 0.25rem;
-  transform: none;
-  border-radius: 50%;
-  background-color: var(--si-gallery-video-indicator-bg);
-  color: var(--si-gallery-video-indicator-color);
-  font-size: var(--si-gallery-video-indicator-font-size);
-  opacity: 1;
-  box-shadow: var(--si-gallery-video-indicator-box-shadow);
-  content: "";
-}
-.gallery-item.video-item:hover::after {
-  background-color: var(--si-gallery-video-indicator-hover-bg);
-  color: var(--si-gallery-video-indicator-hover-color);
-  box-shadow: var(--si-gallery-video-indicator-hover-box-shadow);
-}
+
 .lg-backdrop {
   z-index: 1055;
 }
