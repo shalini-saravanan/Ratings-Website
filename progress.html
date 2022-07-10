@@ -211,57 +211,84 @@
         <div class="d-flex align-items-center justify-content-between mb-4 pb-1 pb-md-3">
             <h1 class="mb-0">Tourist Destinations</h1>
             <div class="d-flex align-items-center ms-sm-4 ms-3">
-              <a href="travel.html" class="btn btn-primary btn-sm fs-sm rounded d-lg-inline-flex">
+             <!-- <a href="travel.html" class="btn btn-primary btn-sm fs-sm rounded d-lg-inline-flex">
                 <i class="bx bx-expand fs-5 lh-1 me-1"></i>
                 &nbsp; Details
-              </a>
+              </a> -->
             </div>
           </div>
-        
+
+          <!-- Modal Content-->
+          <div class="modal fade" id="modalCentered" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">South Island, Newzealand</h5>
+                  <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div >
+                    <div class="card">
+                        <img src="assets/img/01.jpg" class="card-img-top" alt="Card image">
+                        <div class="card-body">
+                          <p class="card-text fs-sm">New Zealand's South Island brims with majestic landscapes at every turn, from dramatic mountains to spectacular fjords. 
+                            Here, you can admire the mountains of Fiordland National Park, a UNESCO World Heritage Site, from hiking trails or a boat on Milford Sound. 
+                            At night, journey to the University of Canterbury's Mount John Observatory to gaze at the starry skies. </p>
+                        </div>
+                        
+                      </div>
+                      <div class="modal-footer">
+                        <button class="btn btn-primary btn-sm" type="button" data-bs-dismiss="modal">Close</button>
+                      </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         <div class = "row">
         <div id = "itemContainer" class="col-xl-9 col-lg-8 tab-pane fade show active" role="tabpanel">
         <!-- Item -->
-        <div class="fs-sm mb-2"><a class="badge fs-sm text-nav bg-secondary text-decoration-none">#1 </a><strong>South Island, Newzealand</strong>
+        
+        <div class="fs-sm mb-2" type="button" data-bs-toggle="modal" data-bs-target="#modalCentered"><a class="badge fs-sm text-nav bg-secondary text-decoration-none">#1 </a><strong>South Island, Newzealand</strong>
             <div class="progress mb-3">
               <div class="progress-bar bg-gradient-primary" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
             </div>
         </div>
-        <div class="fs-sm mb-2"><a class="badge fs-sm text-nav bg-secondary text-decoration-none">#1 </a><strong>South Island, Newzealand</strong>
+        <div class="fs-sm mb-2" type="button" data-bs-toggle="modal" data-bs-target="#modalCentered"><a class="badge fs-sm text-nav bg-secondary text-decoration-none">#1 </a><strong>South Island, Newzealand</strong>
             <div class="progress mb-3">
               <div class="progress-bar bg-gradient-primary" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
             </div>
         </div>
-        <div class="fs-sm mb-2"><a class="badge fs-sm text-nav bg-secondary text-decoration-none">#2 </a><strong>Paris, France</strong>
+        <div class="fs-sm mb-2" type="button" data-bs-toggle="modal" data-bs-target="#modalCentered"><a class="badge fs-sm text-nav bg-secondary text-decoration-none">#2 </a><strong>Paris, France</strong>
             <div class="progress mb-3">
               <div class="progress-bar bg-gradient-primary" role="progressbar" style="width: 93%" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100">93%</div>
             </div>
         </div>
-        <div class="fs-sm mb-2"><a class="badge fs-sm text-nav bg-secondary text-decoration-none">#3 </a><strong>Rome, Italy</strong>
+        <div class="fs-sm mb-2" type="button" data-bs-toggle="modal" data-bs-target="#modalCentered"><a class="badge fs-sm text-nav bg-secondary text-decoration-none">#3 </a><strong>Rome, Italy</strong>
             <div class="progress mb-3">
               <div class="progress-bar bg-gradient-primary" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
             </div>
         </div>
-        <div class="fs-sm mb-2"><a class="badge fs-sm text-nav bg-secondary text-decoration-none">#4 </a><strong>New York</strong>
+        <div class="fs-sm mb-2" type="button" data-bs-toggle="modal" data-bs-target="#modalCentered"><a class="badge fs-sm text-nav bg-secondary text-decoration-none">#4 </a><strong>New York</strong>
             <div class="progress mb-3">
               <div class="progress-bar bg-gradient-primary" role="progressbar" style="width: 87%" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100">87%</div>
             </div>
         </div>
-        <div class="fs-sm mb-2"><a class="badge fs-sm text-nav bg-secondary text-decoration-none">#5 </a><strong>Bali, Indonesia</strong>
+        <div class="fs-sm mb-2" type="button" data-bs-toggle="modal" data-bs-target="#modalCentered"><a class="badge fs-sm text-nav bg-secondary text-decoration-none">#5 </a><strong>Bali, Indonesia</strong>
             <div class="progress mb-3">
               <div class="progress-bar bg-gradient-primary" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
             </div>
         </div>
-        <div class="fs-sm mb-2"><a class="badge fs-sm text-nav bg-secondary text-decoration-none">#6 </a><strong>South Island, Newzealand</strong>
+        <div class="fs-sm mb-2" type="button" data-bs-toggle="modal" data-bs-target="#modalCentered"><a class="badge fs-sm text-nav bg-secondary text-decoration-none">#6 </a><strong>South Island, Newzealand</strong>
             <div class="progress mb-3">
               <div class="progress-bar bg-gradient-primary" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
             </div>
         </div>
-        <div class="fs-sm mb-2"><a class="badge fs-sm text-nav bg-secondary text-decoration-none">#7 </a><strong>Bali, Indonesia</strong>
+        <div class="fs-sm mb-2" type="button" data-bs-toggle="modal" data-bs-target="#modalCentered"><a class="badge fs-sm text-nav bg-secondary text-decoration-none">#7 </a><strong>Bali, Indonesia</strong>
             <div class="progress mb-3">
               <div class="progress-bar bg-gradient-primary" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
             </div>
         </div>
-        <div class="fs-sm mb-2"><a class="badge fs-sm text-nav bg-secondary text-decoration-none">#8 </a><strong>Bali, Indonesia</strong>
+        <div class="fs-sm mb-2" type="button" data-bs-toggle="modal" data-bs-target="#modalCentered"><a class="badge fs-sm text-nav bg-secondary text-decoration-none">#8 </a><strong>Bali, Indonesia</strong>
             <div class="progress mb-3">
               <div class="progress-bar bg-gradient-primary" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
             </div>
