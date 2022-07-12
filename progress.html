@@ -22,13 +22,6 @@
     <!-- Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Favicon and Touch Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicon/site.webmanifest">
-    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#6366f1">
-    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <meta name="msapplication-TileColor" content="#112d32">
@@ -188,8 +181,8 @@
           "<td>" + arr[i][1] + "</td><td>" + arr[i][0] + "</td><td>" +
             arr[i][2] + "</td><td><button onClick = \"removeCheck(this)\" value = \"" + arr[i][3] + "\" class= \"btn btn-danger btn-icon\" type=\"button\">" +
               "<i class= \"bx bx-trash\"></i></button></td></tr>"; */
-              text += "<strong>#" + (i+1) + " &nbsp;</strong>" + arr[i][1] +
-                  "<button type = \"button\" class = \"btn-close ms-2 mb-1\" value = \"" + arr[i][3] + "\" onClick = \"removeCheck(this)\" aria-label = \"Close\"></button><br/>";
+              text += "<strong># &nbsp;</strong>" + arr[i][1] +
+                  "<button type = \"button\" class = \"btn-close ms-2 mb-1\" value = \"" + arr[i][3] + "\" onClick = \"removeCheck(this)\" aria-label = \"Close\"></button> &nbsp; &nbsp;";
       }
       for(let j = 0; j < textBox.length; j++) {
       textBox[j].innerHTML = text;
@@ -221,7 +214,6 @@
       <header class="header navbar navbar-expand-lg bg-light shadow-sm shadow-dark-mode-none fixed-top">
         <div class="container px-3">
           <a href="index.html" class="navbar-brand pe-3">
-            <img src="assets/img/logo.svg" width="47" alt = "" >
             RATE
           </a>
           <div id="navbarNav" class="offcanvas offcanvas-end">
@@ -308,11 +300,18 @@
 
         <div class = "row">
         <div id = "itemContainer" class="col-xl-9 col-lg-8 itemsBatch">
-
+        <div>
+          <div class="d-sm-flex align-items-end justify-content-between ps-lg-2 ps-xxl-0 mt-2 mt-lg-0 pt-4 mb-n3">
+            <div class="me-4">
+              <h3 class="pb-1">Editor's Choice</h3>
+              <p class="text-muted fs-lg mb-2">Here are some top hand picked choices from the editor to give personalized recommendations to you!</p>
+            </div>
+          </div>
+          <br/><br/>
         <!-- Items Batch 1 -->
         <div class = "row items">
           <div class="col-xl-4 col-lg-4" >
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#1 </a>
+            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
             <strong class = "name">South Island, Newzealand &nbsp;</strong>
             <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
           </div>
@@ -324,7 +323,7 @@
         </div>
         <div class = "row items">
           <div class="col-xl-4 col-lg-4" >
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#2 </a>
+            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
             <strong class = "name">Paris, France &nbsp;</strong>
             <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
           </div>
@@ -336,7 +335,7 @@
         </div>
         <div class = "row items">
           <div class="col-xl-4 col-lg-4" >
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#3 </a>
+            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
             <strong class = "name">Rome, Italy &nbsp;</strong>
             <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
           </div>
@@ -348,7 +347,7 @@
         </div>
         <div class = "row items">
           <div class="col-xl-4 col-lg-4" >
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#4 </a>
+            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
             <strong class = "name">New York, United States &nbsp;</strong>
             <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
           </div>
@@ -360,7 +359,7 @@
         </div>
         <div class = "row items">
           <div class="col-xl-4 col-lg-4" >
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#5 </a>
+            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
             <strong class = "name">Bali, Indonesia &nbsp;</strong>
             <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
           </div>
@@ -372,7 +371,7 @@
         </div>
         <div class = "row items">
           <div class="col-xl-4 col-lg-4" >
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#6 </a>
+            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
             <strong class = "name">South Island, Newzealand &nbsp;</strong>
             <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
           </div>
@@ -384,7 +383,7 @@
         </div>
         <div class = "row items">
           <div class="col-xl-4 col-lg-4" >
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#7 </a>
+            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
             <strong class = "name">Paris, France &nbsp;</strong>
             <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
           </div>
@@ -396,7 +395,7 @@
         </div>
         <div class = "row items">
           <div class="col-xl-4 col-lg-4" >
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#8 </a>
+            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
             <strong class = "name">Rome, Italy &nbsp;</strong>
             <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
           </div>
@@ -408,7 +407,7 @@
         </div>
         <div class = "row items">
           <div class="col-xl-4 col-lg-4" >
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#9 </a>
+            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
             <strong class = "name">New York, United States &nbsp;</strong>
             <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
           </div>
@@ -420,7 +419,7 @@
         </div>
         <div class = "row items">
           <div class="col-xl-4 col-lg-4" >
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#10 </a>
+            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
             <strong class = "name">Bali, Indonesia &nbsp;</strong>
             <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
           </div>
@@ -445,12 +444,20 @@
           </div>
         </div>
         <br /><br />
-
+      </div>
         <!-- Items Batch 2-->
-
+      <div>
+        <div class="d-sm-flex align-items-end justify-content-between ps-lg-2 ps-xxl-0 mt-2 mt-lg-0 pt-4 mb-n3">
+          <div class="me-4">
+            <h3 class="pb-1">Most Viewed by Customers</h3>
+            <p class="text-muted fs-lg mb-2">Here are some most viewed items by the customer to give personalized recommendations to you!</p>
+          </div>
+        </div>
+        
+        <br/><br/>
         <div class = "row items">
           <div class="col-xl-4 col-lg-4" >
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#1 </a>
+            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
             <strong class = "name">South Island, Newzealand &nbsp;</strong>
             <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
           </div>
@@ -462,7 +469,7 @@
         </div>
         <div class = "row items">
           <div class="col-xl-4 col-lg-4" >
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#2 </a>
+            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
             <strong class = "name">Paris, France &nbsp;</strong>
             <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
           </div>
@@ -474,7 +481,7 @@
         </div>
         <div class = "row items">
           <div class="col-xl-4 col-lg-4" >
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#3 </a>
+            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
             <strong class = "name">Rome, Italy &nbsp;</strong>
             <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
           </div>
@@ -486,7 +493,7 @@
         </div>
         <div class = "row items">
           <div class="col-xl-4 col-lg-4" >
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#4 </a>
+            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
             <strong class = "name">New York, United States &nbsp;</strong>
             <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
           </div>
@@ -498,7 +505,7 @@
         </div>
         <div class = "row items">
           <div class="col-xl-4 col-lg-4" >
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#5 </a>
+            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
             <strong class = "name">Bali, Indonesia &nbsp;</strong>
             <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
           </div>
@@ -510,7 +517,7 @@
         </div>
         <div class = "row items">
           <div class="col-xl-4 col-lg-4" >
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#6 </a>
+            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
             <strong class = "name">South Island, Newzealand &nbsp;</strong>
             <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
           </div>
@@ -522,7 +529,7 @@
         </div>
         <div class = "row items">
           <div class="col-xl-4 col-lg-4" >
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#7 </a>
+            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
             <strong class = "name">Paris, France &nbsp;</strong>
             <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
           </div>
@@ -534,7 +541,7 @@
         </div>
         <div class = "row items">
           <div class="col-xl-4 col-lg-4" >
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#8 </a>
+            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
             <strong class = "name">Rome, Italy &nbsp;</strong>
             <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
           </div>
@@ -546,7 +553,7 @@
         </div>
         <div class = "row items">
           <div class="col-xl-4 col-lg-4" >
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#9 </a>
+            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
             <strong class = "name">New York, United States &nbsp;</strong>
             <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
           </div>
@@ -558,7 +565,7 @@
         </div>
         <div class = "row items">
           <div class="col-xl-4 col-lg-4" >
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#10 </a>
+            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
             <strong class = "name">Bali, Indonesia &nbsp;</strong>
             <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
           </div>
@@ -584,12 +591,22 @@
           </div>
         </div>
         <br /><br />
-
+      </div>
     <!-- Items Batch 3-->
 
+    <div>
+      <div class="d-sm-flex align-items-end justify-content-between ps-lg-2 ps-xxl-0 mt-2 mt-lg-0 pt-4 mb-n3">
+        <div class="me-4">
+          <h3 class="pb-1">Viewer's Choice</h3>
+          <p class="text-muted fs-lg mb-2">Here are some top picks based on the viewers choice to give personalized recommendations to you!</p>
+        </div>
+      </div>
+      
+      <br/><br/>
+
     <div class = "row items">
       <div class="col-xl-4 col-lg-4" >
-        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#1 </a>
+        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
         <strong class = "name">South Island, Newzealand &nbsp;</strong>
         <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
       </div>
@@ -601,7 +618,7 @@
     </div>
     <div class = "row items">
       <div class="col-xl-4 col-lg-4" >
-        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#2 </a>
+        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
         <strong class = "name">Paris, France &nbsp;</strong>
         <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
       </div>
@@ -613,7 +630,7 @@
     </div>
     <div class = "row items">
       <div class="col-xl-4 col-lg-4" >
-        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#3 </a>
+        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
         <strong class = "name">Rome, Italy &nbsp;</strong>
         <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
       </div>
@@ -625,7 +642,7 @@
     </div>
     <div class = "row items">
       <div class="col-xl-4 col-lg-4" >
-        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#4 </a>
+        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
         <strong class = "name">New York, United States &nbsp;</strong>
         <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
       </div>
@@ -637,7 +654,7 @@
     </div>
     <div class = "row items">
       <div class="col-xl-4 col-lg-4" >
-        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#5 </a>
+        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
         <strong class = "name">Bali, Indonesia &nbsp;</strong>
         <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
       </div>
@@ -649,7 +666,7 @@
     </div>
     <div class = "row items">
       <div class="col-xl-4 col-lg-4" >
-        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#6 </a>
+        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
         <strong class = "name">South Island, Newzealand &nbsp;</strong>
         <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
       </div>
@@ -661,7 +678,7 @@
     </div>
     <div class = "row items">
       <div class="col-xl-4 col-lg-4" >
-        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#7 </a>
+        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
         <strong class = "name">Paris, France &nbsp;</strong>
         <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
       </div>
@@ -673,7 +690,7 @@
     </div>
     <div class = "row items">
       <div class="col-xl-4 col-lg-4" >
-        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#8 </a>
+        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
         <strong class = "name">Rome, Italy &nbsp;</strong>
         <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
       </div>
@@ -685,7 +702,7 @@
     </div>
     <div class = "row items">
       <div class="col-xl-4 col-lg-4" >
-        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#9 </a>
+        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
         <strong class = "name">New York, United States &nbsp;</strong>
         <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
       </div>
@@ -697,7 +714,7 @@
     </div>
     <div class = "row items">
       <div class="col-xl-4 col-lg-4" >
-        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#10 </a>
+        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
         <strong class = "name">Bali, Indonesia &nbsp;</strong>
         <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
       </div>
@@ -723,12 +740,20 @@
       </div>
     </div>
     <br /><br />
+    </div>
 
     <!-- Items Batch 4-->
-
+<div>
+  <div class="d-sm-flex align-items-end justify-content-between ps-lg-2 ps-xxl-0 mt-2 mt-lg-0 pt-4 mb-n3">
+    <div class="me-4">
+      <h3 class="pb-1">Reviewer's Choice</h3>
+      <p class="text-muted fs-lg mb-2">Here are some top picks based on the viewers choice to give personalized recommendations to you!</p>
+    </div>
+  </div>
+  <br/><br/>
     <div class = "row items">
       <div class="col-xl-4 col-lg-4" >
-        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#1 </a>
+        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
         <strong class = "name">South Island, Newzealand &nbsp;</strong>
         <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
       </div>
@@ -740,7 +765,7 @@
     </div>
     <div class = "row items">
       <div class="col-xl-4 col-lg-4" >
-        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#2 </a>
+        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
         <strong class = "name">Paris, France &nbsp;</strong>
         <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
       </div>
@@ -752,7 +777,7 @@
     </div>
     <div class = "row items">
       <div class="col-xl-4 col-lg-4" >
-        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#3 </a>
+        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
         <strong class = "name">Rome, Italy &nbsp;</strong>
         <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
       </div>
@@ -764,7 +789,7 @@
     </div>
     <div class = "row items">
       <div class="col-xl-4 col-lg-4" >
-        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#4 </a>
+        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
         <strong class = "name">New York, United States &nbsp;</strong>
         <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
       </div>
@@ -776,7 +801,7 @@
     </div>
     <div class = "row items">
       <div class="col-xl-4 col-lg-4" >
-        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#5 </a>
+        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
         <strong class = "name">Bali, Indonesia &nbsp;</strong>
         <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
       </div>
@@ -788,7 +813,7 @@
     </div>
     <div class = "row items">
       <div class="col-xl-4 col-lg-4" >
-        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#6 </a>
+        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
         <strong class = "name">South Island, Newzealand &nbsp;</strong>
         <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
       </div>
@@ -800,7 +825,7 @@
     </div>
     <div class = "row items">
       <div class="col-xl-4 col-lg-4" >
-        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#7 </a>
+        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
         <strong class = "name">Paris, France &nbsp;</strong>
         <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
       </div>
@@ -812,7 +837,7 @@
     </div>
     <div class = "row items">
       <div class="col-xl-4 col-lg-4" >
-        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#8 </a>
+        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
         <strong class = "name">Rome, Italy &nbsp;</strong>
         <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
       </div>
@@ -824,7 +849,7 @@
     </div>
     <div class = "row items">
       <div class="col-xl-4 col-lg-4" >
-        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#9 </a>
+        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
         <strong class = "name">New York, United States &nbsp;</strong>
         <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
       </div>
@@ -836,7 +861,7 @@
     </div>
     <div class = "row items">
       <div class="col-xl-4 col-lg-4" >
-        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank">#10 </a>
+        <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
         <strong class = "name">Bali, Indonesia &nbsp;</strong>
         <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
       </div>
@@ -866,19 +891,6 @@
           </div>
         
           
-          <aside class="col-xl-3 col-lg-4">
-              <div class = "gallery">
-              <div class="gallery-item rounded-3  mb-3" >
-              <img src="./assets/img/slider/02.jpg" alt="Gallery thumbnail" >
-              <div class="gallery-item-caption fs-sm fw-medium">Top Travel Destinations</div>
-          </div>
-          <div class="gallery-item rounded-3  mb-3" >
-            <img src="./assets/img/slider/01.jpg" alt="Gallery thumbnail">
-            <div class="gallery-item-caption fs-sm fw-medium">Top Travel Destinations</div>
-        </div>
-        </div>
-          
-        </aside>
         </div>
         
          <!-- Pagination 
@@ -954,7 +966,6 @@
         <div class="row pb-5">
           <div class="col-lg-4 col-md-6">
             <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
-              <img src="assets/img/logo.svg" width="47"  alt = "">
               RATE
             </div>
             <p class="fs-sm text-light opacity-70 pb-lg-3 mb-4">Find the best things in the world. E X P L O R E the world with us! </p>
