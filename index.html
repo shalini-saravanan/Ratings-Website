@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Ratings - See what Tops the list, best ranked items</title>
+    <meta name="google-site-verification" content="OwV3Mnwl1XOJoqSFQMO_ujt-RQJt6LJe-t1s9UxWZHI" />
 
     <!-- SEO Meta Tags -->
     <meta name="description" content="Make a perfect plan by choosing the top ranked tourist spots, hotels and any other things. Find the ratings of everything here!">
     <meta name="keywords" content="ratings, travel, food, stars, advisor, guide, ranking, plan, statists, list, top">
     <meta name="author" content="Rate">
-    
+
     <!-- SEO OG Meta Tags -->
     <meta property="og:title" content="Top Travel Destinations in the world and their ranks" />
     <meta property="og:type" content="website" />
@@ -19,139 +21,150 @@
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="English">
-    
+
     <link rel="" href="index.html" />
 
     <!-- Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-   
+
     <meta name="msapplication-TileColor" content="#080032">
     <meta name="theme-color" content="#ffffff">
 
     <!-- Vendor Styles -->
-    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css"/>
-    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css" />
+    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css" />
 
     <!-- Main Theme Styles + Bootstrap -->
     <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
 
     <!-- Page loading styles -->
     <style>
-      .page-loading {
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        -webkit-transition: all .4s .2s ease-in-out;
-        transition: all .4s .2s ease-in-out;
-        background-color: #fff;
-        opacity: 0;
-        visibility: hidden;
-        z-index: 9999;
-      }
-      .dark-mode .page-loading {
-        background-color: #0b0f19;
-      }
-      .page-loading.active {
-        opacity: 1;
-        visibility: visible;
-      }
-      .page-loading-inner {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
-        -webkit-transition: opacity .2s ease-in-out;
-        transition: opacity .2s ease-in-out;
-        opacity: 0;
-      }
-      .page-loading.active > .page-loading-inner {
-        opacity: 1;
-      }
-      .page-loading-inner > span {
-        display: block;
-        font-size: 1rem;
-        font-weight: normal;
-        color: #9397ad;
-      }
-      .dark-mode .page-loading-inner > span {
-        color: #fff;
-        opacity: .6;
-      }
-      .page-spinner {
-        display: inline-block;
-        width: 2.75rem;
-        height: 2.75rem;
-        margin-bottom: .75rem;
-        vertical-align: text-bottom;
-        border: .15em solid #b4b7c9;
-        border-right-color: transparent;
-        border-radius: 50%;
-        -webkit-animation: spinner .75s linear infinite;
-        animation: spinner .75s linear infinite;
-      }
-      .dark-mode .page-spinner {
-        border-color: rgba(255,255,255,.4);
-        border-right-color: transparent;
-      }
-      @-webkit-keyframes spinner {
-        100% {
-          -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
+        .page-loading {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-transition: all .4s .2s ease-in-out;
+            transition: all .4s .2s ease-in-out;
+            background-color: #fff;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 9999;
         }
-      }
-      @keyframes spinner {
-        100% {
-          -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
+        
+        .dark-mode .page-loading {
+            background-color: #0b0f19;
         }
-      }
+        
+        .page-loading.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .page-loading-inner {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            -webkit-transition: opacity .2s ease-in-out;
+            transition: opacity .2s ease-in-out;
+            opacity: 0;
+        }
+        
+        .page-loading.active>.page-loading-inner {
+            opacity: 1;
+        }
+        
+        .page-loading-inner>span {
+            display: block;
+            font-size: 1rem;
+            font-weight: normal;
+            color: #9397ad;
+        }
+        
+        .dark-mode .page-loading-inner>span {
+            color: #fff;
+            opacity: .6;
+        }
+        
+        .page-spinner {
+            display: inline-block;
+            width: 2.75rem;
+            height: 2.75rem;
+            margin-bottom: .75rem;
+            vertical-align: text-bottom;
+            border: .15em solid #b4b7c9;
+            border-right-color: transparent;
+            border-radius: 50%;
+            -webkit-animation: spinner .75s linear infinite;
+            animation: spinner .75s linear infinite;
+        }
+        
+        .dark-mode .page-spinner {
+            border-color: rgba(255, 255, 255, .4);
+            border-right-color: transparent;
+        }
+        
+        @-webkit-keyframes spinner {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes spinner {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
     </style>
 
     <!-- Theme mode -->
     <script>
-      let mode = window.localStorage.getItem('mode'),
-          root = document.getElementsByTagName('html')[0];
-      if (mode !== null && mode === 'dark') {
-        root.classList.add('dark-mode');
-      } else {
-        root.classList.remove('dark-mode');
-      }
+        let mode = window.localStorage.getItem('mode'),
+            root = document.getElementsByTagName('html')[0];
+        if (mode !== null && mode === 'dark') {
+            root.classList.add('dark-mode');
+        } else {
+            root.classList.remove('dark-mode');
+        }
     </script>
 
     <!-- Page loading scripts -->
     <script>
-      (function () {
-        window.onload = function () {
-          const preloader = document.querySelector('.page-loading');
-          preloader.classList.remove('active');
-          setTimeout(function () {
-            preloader.remove();
-          }, 1000);
-        };
-      })();
+        (function() {
+            window.onload = function() {
+                const preloader = document.querySelector('.page-loading');
+                preloader.classList.remove('active');
+                setTimeout(function() {
+                    preloader.remove();
+                }, 1000);
+            };
+        })();
     </script>
     <script async src="https://cse.google.com/cse.js?cx=5c2828add8b05a012">
     </script>
 
-  </head>
+</head>
 
 
-  <!-- Body -->
-  <body>
-    
+<!-- Body -->
+
+<body>
+
     <!-- Page loading spinner -->
     <div class="page-loading active">
-      <div class="page-loading-inner">
-        <div class="page-spinner"></div><span>Loading...</span>
-      </div>
+        <div class="page-loading-inner">
+            <div class="page-spinner"></div><span>Loading...</span>
+        </div>
     </div>
 
 
@@ -159,69 +172,69 @@
     <main class="page-wrapper">
 
 
-      <!-- Navbar -->
-      <header class="header navbar navbar-expand-lg bg-light shadow-sm shadow-dark-mode-none fixed-top">
-        <div class="container px-3">
-          <a href="index.html" class="navbar-brand pe-3">
+        <!-- Navbar -->
+        <header class="header navbar navbar-expand-lg bg-light shadow-sm shadow-dark-mode-none fixed-top">
+            <div class="container px-3">
+                <a href="index.html" class="navbar-brand pe-3">
             RATE
           </a>
-          <div id="navbarNav" class="offcanvas offcanvas-end">
-            <div class="offcanvas-header border-bottom">
-              <h5 class="offcanvas-title">Menu</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a href="index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="progress.html" class="nav-link">Travel</a>
-                  </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">Food</a>
-                </li>
-              </ul>
-            </div>      
-          </div>
-          <div class="gcse-search"></div>
-          <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
-            <input type="checkbox" class="form-check-input" id="theme-mode">
-            <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
-            <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
-          </div>
-          <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <div id="navbarNav" class="offcanvas offcanvas-end">
+                    <div class="offcanvas-header border-bottom">
+                        <h5 class="offcanvas-title">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="progress.html" class="nav-link">Travel</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Food</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="gcse-search"></div>
+                <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+                    <input type="checkbox" class="form-check-input" id="theme-mode">
+                    <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
+                    <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
+                </div>
+                <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-        </div>
-      </header>
+            </div>
+        </header>
 
 
-      <!-- Page container -->
-      <section class="position-relative pt-5 py-lg-5 mt-3 mt-md-4">
+        <!-- Page container -->
+        <section class="position-relative pt-5 py-lg-5 mt-3 mt-md-4">
 
-        <!-- Swiper tabs (Project images) -->
-        <div class="swiper-tabs position-md-absolute top-0 end-0 w-md-50 h-100">
-          <div id="project-1" class="swiper-tab position-md-absolute w-100 h-100 bg-position-center bg-repeat-0 bg-size-cover active" style="background-image: url(assets/img/slider/01.jpg);">
-            <div class="ratio ratio-1x1"></div>
-          </div>
-          <div id="project-2" class="swiper-tab position-md-absolute w-100 h-100 bg-position-center bg-repeat-0 bg-size-cover" style="background-image: url(assets/img/slider/02.jpg);">
-            <div class="ratio ratio-1x1"></div>
-          </div>
-          <div id="project-3" class="swiper-tab position-md-absolute w-100 h-100 bg-position-center bg-repeat-0 bg-size-cover" style="background-image: url(assets/img/slider/03.jpg);">
-            <div class="ratio ratio-1x1"></div>
-          </div>
-        </div>
+            <!-- Swiper tabs (Project images) -->
+            <div class="swiper-tabs position-md-absolute top-0 end-0 w-md-50 h-100">
+                <div id="project-1" class="swiper-tab position-md-absolute w-100 h-100 bg-position-center bg-repeat-0 bg-size-cover active" style="background-image: url(assets/img/slider/01.jpg);">
+                    <div class="ratio ratio-1x1"></div>
+                </div>
+                <div id="project-2" class="swiper-tab position-md-absolute w-100 h-100 bg-position-center bg-repeat-0 bg-size-cover" style="background-image: url(assets/img/slider/02.jpg);">
+                    <div class="ratio ratio-1x1"></div>
+                </div>
+                <div id="project-3" class="swiper-tab position-md-absolute w-100 h-100 bg-position-center bg-repeat-0 bg-size-cover" style="background-image: url(assets/img/slider/03.jpg);">
+                    <div class="ratio ratio-1x1"></div>
+                </div>
+            </div>
 
 
-        <div class="container pt-1 pt-lg-2">
-          <div class="row">
-            <div class="col-lg-5 col-md-6">
-              
-              <!-- Project description (Slider) -->
-              <div class="d-none d-lg-block" style="height: 160px;"></div>
-              <div class="d-none d-md-block d-lg-none" style="height: 80px;"></div>
-              <div class="swiper pt-4 pt-md-0" data-swiper-options='{
+            <div class="container pt-1 pt-lg-2">
+                <div class="row">
+                    <div class="col-lg-5 col-md-6">
+
+                        <!-- Project description (Slider) -->
+                        <div class="d-none d-lg-block" style="height: 160px;"></div>
+                        <div class="d-none d-md-block d-lg-none" style="height: 80px;"></div>
+                        <div class="swiper pt-4 pt-md-0" data-swiper-options='{
                 "spaceBetween": 30,
                 "loop": true,
                 "tabs": true,
@@ -234,100 +247,100 @@
                   "nextEl": ".btn-next"
                 }
               }'>
-                <div class="swiper-wrapper">
+                            <div class="swiper-wrapper">
 
-                  <!-- Item -->
-                  <div class="swiper-slide" data-swiper-tab="#project-1">
-                    <h2 class="h1 mb-4">RATE THE WORLD!</h2>
-                    <p class="pb-3 mb-3">Make a perfect plan by choosing the top ranked tourist spots, hotels and amny other things. </p>
-                    <table class="mb-5">
-                      <tbody>
-                        <tr>
-                          <th class="pb-2">Travel Destinations</td>
-                        </tr>
-                        <tr>
-                          <th class="pb-2">Hotels</td>
-                        </tr>
-                        <tr>
-                          <th class="pb-2">Foods</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
+                                <!-- Item -->
+                                <div class="swiper-slide" data-swiper-tab="#project-1">
+                                    <h2 class="h1 mb-4">RATE THE WORLD!</h2>
+                                    <p class="pb-3 mb-3">Make a perfect plan by choosing the top ranked tourist spots, hotels and amny other things. </p>
+                                    <table class="mb-5">
+                                        <tbody>
+                                            <tr>
+                                                <th class="pb-2">Travel Destinations</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="pb-2">Hotels</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="pb-2">Foods</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
 
-                  <!-- Item -->
-                  <div class="swiper-slide" data-swiper-tab="#project-2">
-                    <h2 class="h1 mb-4">See what tops the list!</h2>
-                    <p class="pb-3 mb-3">Comapare the rankings and ratings of the thuings, analyse it and make your decisions wiser!</p>
-                    <a href="progress.html" class="btn btn-primary shadow-primary mt-n2">View Ratings</a>
-                  </div>
+                                <!-- Item -->
+                                <div class="swiper-slide" data-swiper-tab="#project-2">
+                                    <h2 class="h1 mb-4">See what tops the list!</h2>
+                                    <p class="pb-3 mb-3">Comapare the rankings and ratings of the thuings, analyse it and make your decisions wiser!</p>
+                                    <a href="progress.html" class="btn btn-primary shadow-primary mt-n2">View Ratings</a>
+                                </div>
 
-                  <!-- Item -->
-                  <div class="swiper-slide" data-swiper-tab="#project-3">
-                    <h2 class="h1 mb-4">EXPLORE the World!</h2>
-                    <p class="pb-3 mb-3">Pick your best choice from the vast choices. Explore the top trends that u need to knmow!</p>
-                    
-                    <a href="progress.html" class="btn btn-primary shadow-primary mt-n2">View Ratings</a>
-                  </div>
-                </div>
-                
-                <!-- Prev / Next buttons + Counter -->
-                <div class="d-flex align-items-center ps-2 pb-5">
-                  <button type="button" class="btn btn-prev btn-icon btn-sm position-static">
+                                <!-- Item -->
+                                <div class="swiper-slide" data-swiper-tab="#project-3">
+                                    <h2 class="h1 mb-4">EXPLORE the World!</h2>
+                                    <p class="pb-3 mb-3">Pick your best choice from the vast choices. Explore the top trends that u need to knmow!</p>
+
+                                    <a href="progress.html" class="btn btn-primary shadow-primary mt-n2">View Ratings</a>
+                                </div>
+                            </div>
+
+                            <!-- Prev / Next buttons + Counter -->
+                            <div class="d-flex align-items-center ps-2 pb-5">
+                                <button type="button" class="btn btn-prev btn-icon btn-sm position-static">
                     <i class="bx bx-chevron-left"></i>
                   </button>
-                  <div class="swiper-pagination position-static w-auto mx-3" style="min-width: 30px;"></div>
-                  <button type="button" class="btn btn-next btn-icon btn-sm position-static">
+                                <div class="swiper-pagination position-static w-auto mx-3" style="min-width: 30px;"></div>
+                                <button type="button" class="btn btn-next btn-icon btn-sm position-static">
                     <i class="bx bx-chevron-right"></i>
                   </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </section>
+        </section>
     </main>
 
 
     <!-- Footer -->
     <footer class="footer dark-mode bg-dark pt-5 pb-4 pb-lg-5">
-      <div class="container pt-lg-4">
-        <div class="row pb-5">
-          <div class="col-lg-4 col-md-6">
-            <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
-              RATE
+        <div class="container pt-lg-4">
+            <div class="row pb-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
+                        RATE
+                    </div>
+                    <p class="fs-sm text-light opacity-70 pb-lg-3 mb-4">Find the best things in the world. E X P L O R E the world with us! </p>
+                </div>
+                <div class="col-xl-6 col-lg-7 col-md-5 offset-xl-2 offset-md-1 pt-4 pt-md-1 pt-lg-0">
+
+                    <div id="footer-links" class="row">
+                        <div class="d-flex justify-content-center pt-4 mt-lg-3">
+                            <a href="#" class="btn btn-icon btn-secondary btn-facebook mx-2">
+                                <i class="bx bxl-facebook"></i>
+                            </a>
+                            <a href="#" class="btn btn-icon btn-secondary btn-google mx-2">
+                                <i class="bx bxl-google"></i>
+                            </a>
+                            <a href="#" class="btn btn-icon btn-secondary btn-instagram mx-2">
+                                <i class="bx bxl-instagram"></i>
+                            </a>
+
+                            <a href="#" class="btn btn-icon btn-secondary btn-youtube mx-2">
+                                <i class="bx bxl-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p class="fs-sm text-light opacity-70 pb-lg-3 mb-4">Find the best things in the world. E X P L O R E the world with us! </p>
-          </div>
-          <div class="col-xl-6 col-lg-7 col-md-5 offset-xl-2 offset-md-1 pt-4 pt-md-1 pt-lg-0">
-            
-            <div id="footer-links" class="row">
-                <div class="d-flex justify-content-center pt-4 mt-lg-3">
-                    <a href="#" class="btn btn-icon btn-secondary btn-facebook mx-2">
-                      <i class="bx bxl-facebook"></i>
-                    </a>
-                    <a href="#" class="btn btn-icon btn-secondary btn-google mx-2">
-                        <i class="bx bxl-google"></i>
-                      </a>
-                    <a href="#" class="btn btn-icon btn-secondary btn-instagram mx-2">
-                      <i class="bx bxl-instagram"></i>
-                    </a>
-                    
-                    <a href="#" class="btn btn-icon btn-secondary btn-youtube mx-2">
-                      <i class="bx bxl-youtube"></i>
-                    </a>
-                  </div>
-            </div>
-          </div>
         </div>
-      </div>
     </footer>
 
 
     <!-- Back to top button -->
     <a href="#top" class="btn-scroll-top" data-scroll>
-      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
-      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+        <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+        <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
     </a>
 
 
@@ -338,5 +351,6 @@
 
     <!-- Main Theme Script -->
     <script src="assets/js/theme.min.js"></script>
-  </body>
+</body>
+
 </html>

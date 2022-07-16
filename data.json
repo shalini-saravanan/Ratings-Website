@@ -1,0 +1,63 @@
+{
+    "ratings": [{
+            "name": "Soham Virgin Islands",
+            "ratings": 90,
+            "views": 738727,
+            "choiceBy": "Editor's Choice"
+        },
+        {
+            "name": "Faxon Ohio",
+            "ratings": 48,
+            "views": 146212,
+            "choiceBy": "Editor's Choice"
+        },
+        {
+            "name": "Clara Washington",
+            "ratings": 56,
+            "views": 901978,
+            "choiceBy": "Reviewer's Choice"
+        },
+        {
+            "name": "Mulberry Nebraska",
+            "ratings": 74,
+            "views": 249201,
+            "choiceBy": "Viwer's Chioce"
+        },
+        {
+            "name": "Orick Connecticut",
+            "ratings": 53,
+            "views": 566999,
+            "choiceBy": "Viwer's Chioce"
+        },
+        {
+            "name": "Roberts Michigan",
+            "ratings": 59,
+            "views": 550867,
+            "choiceBy": "Viwer's Chioce"
+        },
+        {
+            "name": "Kempton Colorado",
+            "ratings": 65,
+            "views": 315543,
+            "choiceBy": "Editor's Choice"
+        },
+        {
+            "name": "Umapine Texas",
+            "ratings": 92,
+            "views": 824188,
+            "choiceBy": "Reviewer's Choice"
+        },
+        {
+            "name": "Shasta Kansas",
+            "ratings": 76,
+            "views": 884581,
+            "choiceBy": "Reviewer's Choice"
+        },
+        {
+            "name": "Spelter Virginia",
+            "ratings": 93,
+            "views": 686002,
+            "choiceBy": "Viwer's Chioce"
+        }
+    ]
+}

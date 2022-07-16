@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Top Travel Destinations - Best ranked items,see what tops the world</title>
 
@@ -8,7 +9,7 @@
     <meta name="description" content="Make a perfect plan by choosing the top ranked tourist spots, hotels, foods and any other things. Find the ratings of everything here!">
     <meta name="keywords" content="ratings, travel, food, stars, advisor, guide, ranking, plan, statists, list, top">
     <meta name="author" content="Rate">
-    
+
     <!-- SEO OG Meta Tags -->
     <meta property="og:title" content="Top Travel Destinations in the world and their ranks" />
     <meta property="og:type" content="website" />
@@ -19,215 +20,222 @@
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="English">
-    
+
     <link rel="" href="index.html" />
 
     <!-- Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+
     <meta name="msapplication-TileColor" content="#112d32">
     <meta name="theme-color" content="#ffffff">
 
     <!--Style sheet -->
-    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css"/>
+    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css" />
 
     <!-- Main Theme Styles + Bootstrap -->
     <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
 
     <!-- Page loading styles -->
     <style>
-      .page-loading {
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        -webkit-transition: all .4s .2s ease-in-out;
-        transition: all .4s .2s ease-in-out;
-        background-color: #fff;
-        opacity: 0;
-        visibility: hidden;
-        z-index: 9999;
-      }
-      .dark-mode .page-loading {
-        background-color: #0b0f19;
-      }
-      .page-loading.active {
-        opacity: 1;
-        visibility: visible;
-      }
-      .page-loading-inner {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
-        -webkit-transition: opacity .2s ease-in-out;
-        transition: opacity .2s ease-in-out;
-        opacity: 0;
-      }
-      .page-loading.active > .page-loading-inner {
-        opacity: 1;
-      }
-      .page-loading-inner > span {
-        display: block;
-        font-size: 1rem;
-        font-weight: normal;
-        color: #9397ad;
-      }
-      .dark-mode .page-loading-inner > span {
-        color: #fff;
-        opacity: .6;
-      }
-      .page-spinner {
-        display: inline-block;
-        width: 2.75rem;
-        height: 2.75rem;
-        margin-bottom: .75rem;
-        vertical-align: text-bottom;
-        border: .15em solid #b4b7c9;
-        border-right-color: transparent;
-        border-radius: 50%;
-        -webkit-animation: spinner .75s linear infinite;
-        animation: spinner .75s linear infinite;
-      }
-      .dark-mode .page-spinner {
-        border-color: rgba(255,255,255,.4);
-        border-right-color: transparent;
-      }
-      @-webkit-keyframes spinner {
-        100% {
-          -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
+        .page-loading {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-transition: all .4s .2s ease-in-out;
+            transition: all .4s .2s ease-in-out;
+            background-color: #fff;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 9999;
         }
-      }
-      @keyframes spinner {
-        100% {
-          -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
+        
+        .dark-mode .page-loading {
+            background-color: #0b0f19;
         }
-      }
+        
+        .page-loading.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .page-loading-inner {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            -webkit-transition: opacity .2s ease-in-out;
+            transition: opacity .2s ease-in-out;
+            opacity: 0;
+        }
+        
+        .page-loading.active>.page-loading-inner {
+            opacity: 1;
+        }
+        
+        .page-loading-inner>span {
+            display: block;
+            font-size: 1rem;
+            font-weight: normal;
+            color: #9397ad;
+        }
+        
+        .dark-mode .page-loading-inner>span {
+            color: #fff;
+            opacity: .6;
+        }
+        
+        .page-spinner {
+            display: inline-block;
+            width: 2.75rem;
+            height: 2.75rem;
+            margin-bottom: .75rem;
+            vertical-align: text-bottom;
+            border: .15em solid #b4b7c9;
+            border-right-color: transparent;
+            border-radius: 50%;
+            -webkit-animation: spinner .75s linear infinite;
+            animation: spinner .75s linear infinite;
+        }
+        
+        .dark-mode .page-spinner {
+            border-color: rgba(255, 255, 255, .4);
+            border-right-color: transparent;
+        }
+        
+        @-webkit-keyframes spinner {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes spinner {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
     </style>
 
     <!-- Theme mode -->
     <script>
-      let mode = window.localStorage.getItem('mode'),
-          root = document.getElementsByTagName('html')[0];
-      if (mode !== null && mode === 'dark') {
-        root.classList.add('dark-mode');
-      } else {
-        root.classList.remove('dark-mode');
-      }
+        let mode = window.localStorage.getItem('mode'),
+            root = document.getElementsByTagName('html')[0];
+        if (mode !== null && mode === 'dark') {
+            root.classList.add('dark-mode');
+        } else {
+            root.classList.remove('dark-mode');
+        }
     </script>
 
-    <script
-    src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
     <!-- Page loading scripts -->
     <script>
-      (function () {
-        window.onload = function () {
-          const preloader = document.querySelector('.page-loading');
-          preloader.classList.remove('active');
-          setTimeout(function () {
-            preloader.remove();
-          }, 1000);
-        };
-      })();
+        (function() {
+            window.onload = function() {
+                const preloader = document.querySelector('.page-loading');
+                preloader.classList.remove('active');
+                setTimeout(function() {
+                    preloader.remove();
+                }, 1000);
+            };
+        })();
     </script>
 
     <!--CheckBox Scripts-->
     <script>
-    
-    function searchFunc() {
-      var txtVal;
-      input = document.getElementById("myInput");
-      filter = input.value.toUpperCase();
+        function searchFunc() {
+            var txtVal;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
 
-      const divs = document.getElementById("itemContainer");
-      const items = document.querySelectorAll(".items");
+            const divs = document.getElementById("itemContainer");
+            const items = document.querySelectorAll(".items");
 
-      for(let i = 0; i < items.length; i++) {
-        const names = items[i].getElementsByTagName("strong")[0];
-        txtVal = names.innerText;
-        if (txtVal.toUpperCase().indexOf(filter) > -1) {
-            items[i].style.display = "";
-        } else {
-            items[i].style.display = "none";
+            for (let i = 0; i < items.length; i++) {
+                const names = items[i].getElementsByTagName("strong")[0];
+                txtVal = names.innerText;
+                if (txtVal.toUpperCase().indexOf(filter) > -1) {
+                    items[i].style.display = "";
+                } else {
+                    items[i].style.display = "none";
+                }
+            }
+
         }
-      }
 
-    }
+        function cpyFunc() {
+            const cpyText = document.querySelectorAll(".myText")[0];
+            navigator.clipboard.writeText(cpyText.innerText);
+        }
 
-    function cpyFunc() {
-      const cpyText = document.querySelectorAll(".myText")[0];
-      navigator.clipboard.writeText(cpyText.innerText);
-    }
+        function removeCheck(obj) {
+            const divs = document.getElementById("itemContainer");
+            const checkBox = divs.querySelectorAll(".checks");
+            checkBox[obj.value].checked = false;
+            myfunc();
 
-    function removeCheck(obj) {
-      const divs = document.getElementById("itemContainer");
-      const checkBox = divs.querySelectorAll(".checks");
-      checkBox[obj.value].checked = false;
-      myfunc();
-        
-    }
+        }
 
-    function myfunc() {
-      var arr = [];    
-      const divs = document.getElementById("itemContainer");
+        function myfunc() {
+            var arr = [];
+            const divs = document.getElementById("itemContainer");
 
-      const ranks = divs.querySelectorAll(".rank");
-      const names = divs.querySelectorAll(".name");
-      const percentage = divs.querySelectorAll(".percentage");
-      const checkBox = divs.querySelectorAll(".checks");
+            const ranks = divs.querySelectorAll(".rank");
+            const names = divs.querySelectorAll(".name");
+            const percentage = divs.querySelectorAll(".percentage");
+            const checkBox = divs.querySelectorAll(".checks");
 
-      var textBox = document.querySelectorAll(".myText");
+            var textBox = document.querySelectorAll(".myText");
 
-      for(let i = 0; i < ranks.length; i++) {
-        if (checkBox[i].checked == true){
-          arr.push([ranks[i].innerHTML, names[i].innerHTML, percentage[i].innerHTML, i]);
-        } 
-      }
+            for (let i = 0; i < ranks.length; i++) {
+                if (checkBox[i].checked == true) {
+                    arr.push([ranks[i].innerHTML, names[i].innerHTML, percentage[i].innerHTML, i]);
+                }
+            }
 
-      var text = "";
-      for(let i = 0; i < arr.length; i++) {
+            var text = "";
+            for (let i = 0; i < arr.length; i++) {
 
-        /* text += "<tr><th scope= \"row \">" + (i+1) + "</th>" +
-          "<td>" + arr[i][1] + "</td><td>" + arr[i][0] + "</td><td>" +
-            arr[i][2] + "</td><td><button onClick = \"removeCheck(this)\" value = \"" + arr[i][3] + "\" class= \"btn btn-danger btn-icon\" type=\"button\">" +
-              "<i class= \"bx bx-trash\"></i></button></td></tr>"; */
-              text += "<strong># &nbsp;</strong>" + arr[i][1] +
-                  "<button type = \"button\" class = \"btn-close ms-2 mb-1\" value = \"" + arr[i][3] + "\" onClick = \"removeCheck(this)\" aria-label = \"Close\"></button> &nbsp; &nbsp;";
-      }
-      for(let j = 0; j < textBox.length; j++) {
-      textBox[j].innerHTML = text;
-      }
+                /* text += "<tr><th scope= \"row \">" + (i+1) + "</th>" +
+                  "<td>" + arr[i][1] + "</td><td>" + arr[i][0] + "</td><td>" +
+                    arr[i][2] + "</td><td><button onClick = \"removeCheck(this)\" value = \"" + arr[i][3] + "\" class= \"btn btn-danger btn-icon\" type=\"button\">" +
+                      "<i class= \"bx bx-trash\"></i></button></td></tr>"; */
+                text += "<strong># &nbsp;</strong>" + arr[i][1] +
+                    "<button type = \"button\" class = \"btn-close ms-2 mb-1\" value = \"" + arr[i][3] + "\" onClick = \"removeCheck(this)\" aria-label = \"Close\"></button> &nbsp; &nbsp;";
+            }
+            for (let j = 0; j < textBox.length; j++) {
+                textBox[j].innerHTML = text;
+            }
 
-    }
-  </script>
-  <script async src="https://cse.google.com/cse.js?cx=5c2828add8b05a012">
-  </script>
+        }
+    </script>
+    <script async src="https://cse.google.com/cse.js?cx=5c2828add8b05a012">
+    </script>
 
-  </head>
+</head>
 
 
 
 <!-- Body -->
+
 <body>
-  
+
     <!-- Page loading spinner -->
     <div class="page-loading active">
-      <div class="page-loading-inner">
-        <div class="page-spinner"></div><span>Loading...</span>
-      </div>
+        <div class="page-loading-inner">
+            <div class="page-spinner"></div><span>Loading...</span>
+        </div>
     </div>
 
 
@@ -235,78 +243,78 @@
     <main class="page-wrapper">
 
 
-      <!-- Navbar -->
-      <header class="header navbar navbar-expand-lg bg-light shadow-sm shadow-dark-mode-none fixed-top">
-        <div class="container px-3">
-          <a href="index.html" class="navbar-brand pe-3">
+        <!-- Navbar -->
+        <header class="header navbar navbar-expand-lg bg-light shadow-sm shadow-dark-mode-none fixed-top">
+            <div class="container px-3">
+                <a href="index.html" class="navbar-brand pe-3">
             RATE
           </a>
-          <div id="navbarNav" class="offcanvas offcanvas-end">
-            <div class="offcanvas-header border-bottom">
-              <h5 class="offcanvas-title">Menu</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a href="index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="progress.html" class="nav-link">Travel</a>
-                  </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">Food</a>
-                </li>
-              </ul>
-            </div>      
-          </div>
-          <div class="gcse-search"><i class="bx bx-search position-absolute top-50 end-0 translate-middle-y me-3 zindex-5 fs-lg"></i></div>
-          <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
-            <input type="checkbox" class="form-check-input" id="theme-mode">
-            <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
-            <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
-          </div>
-          <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <div id="navbarNav" class="offcanvas offcanvas-end">
+                    <div class="offcanvas-header border-bottom">
+                        <h5 class="offcanvas-title">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="progress.html" class="nav-link">Travel</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Food</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="gcse-search"><i class="bx bx-search position-absolute top-50 end-0 translate-middle-y me-3 zindex-5 fs-lg"></i></div>
+                <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+                    <input type="checkbox" class="form-check-input" id="theme-mode">
+                    <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
+                    <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
+                </div>
+                <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          
-        </div>
-      </header>
+
+            </div>
+        </header>
 
 
-      <!-- Breadcrumb -->
-      <nav class="container mt-lg-4 pt-5" aria-label="breadcrumb">
-        <ol class="breadcrumb mb-0 pt-5">
-          <li class="breadcrumb-item">
-            <a href="index.html"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
-          </li>
-          <li class="breadcrumb-item active" aria-current="page">Ratings</li>
-        </ol>
-      </nav>
+        <!-- Breadcrumb -->
+        <nav class="container mt-lg-4 pt-5" aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0 pt-5">
+                <li class="breadcrumb-item">
+                    <a href="index.html"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">Ratings</li>
+            </ol>
+        </nav>
 
 
-      <!-- Page content -->
-      <section class="container mt-4 mb-2 mb-md-4 mb-lg-5 pt-lg-2 pb-5">
+        <!-- Page content -->
+        <section class="container mt-4 mb-2 mb-md-4 mb-lg-5 pt-lg-2 pb-5">
 
-        <!-- Page title + Layout switcher -->
-        <div class="d-flex align-items-center justify-content-between mb-4 pb-1 pb-md-3">
-            <h1 class="mb-0 col-lg-8 col-md-6">Tourist Destinations</h1>
-            <div class="d-flex align-items-center ms-sm-4 ms-3">
-             <!-- <a href="travel.html" class="btn btn-primary btn-sm fs-sm rounded d-lg-inline-flex">
+            <!-- Page title + Layout switcher -->
+            <div class="d-flex align-items-center justify-content-between mb-4 pb-1 pb-md-3">
+                <h1 class="mb-0 col-lg-8 col-md-6">Tourist Destinations</h1>
+                <div class="d-flex align-items-center ms-sm-4 ms-3">
+                    <!-- <a href="travel.html" class="btn btn-primary btn-sm fs-sm rounded d-lg-inline-flex">
                 <i class="bx bx-expand fs-5 lh-1 me-1"></i>
                 &nbsp; Details
               </a> -->
-            </div>
-            <div class="col-lg-4 col-sm-6">
-              <div class="input-group">
-                <input type="text" id="myInput" onkeyup="searchFunc()" class="form-control pe-5 rounded" placeholder="Search the items...">
-                <i class="bx bx-search position-absolute top-50 end-0 translate-middle-y me-3 zindex-5 fs-lg"></i>
-              </div>
-            </div>
-            
-          </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="input-group">
+                        <input type="text" id="myInput" onkeyup="searchFunc()" class="form-control pe-5 rounded" placeholder="Search the items...">
+                        <i class="bx bx-search position-absolute top-50 end-0 translate-middle-y me-3 zindex-5 fs-lg"></i>
+                    </div>
+                </div>
 
-          <!-- Modal Content
+            </div>
+
+            <!-- Modal Content
           <div class="modal fade" id="modalCentered" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
@@ -331,606 +339,486 @@
               </div>
             </div>
           </div>-->
-         
-        <div class = "row">
-        <div id = "itemContainer" class="col-xl-9 col-lg-8 itemsBatch">
-        <div>
-          <div class="d-sm-flex align-items-end justify-content-between ps-lg-2 ps-xxl-0 mt-2 mt-lg-0 pt-4 mb-n3">
-            <div class="me-4">
-              <h3 class="pb-1">Editor's Choice</h3>
-              <p class="text-muted fs-lg mb-2">Here are some top hand picked choices from the editor to give personalized recommendations to you!</p>
-            </div>
-          </div>
-          <br/><br/>
-        <!-- Items Batch 1 -->
-        <div class = "row items">
-          <div class="col-xl-4 col-lg-4" >
-            <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-            <strong class = "name">South Island, Newzealand &nbsp;</strong>
-            
-          </div>
-        <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-            <div class="progress mb-3">
-              <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
-            </div>
-        </div>
-        </div>
-        <div class = "row items">
-          <div class="col-xl-4 col-lg-4" >
-            <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-            <strong class = "name">Paris, France &nbsp;</strong>
-          </div>
-        <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-            <div class="progress mb-3">
-              <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
-            </div>
-        </div>
-        </div>
-        <div class = "row items">
-          <div class="col-xl-4 col-lg-4" >
-            <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-            <strong class = "name">Rome, Italy &nbsp;</strong>
-          </div>
-        <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-            <div class="progress mb-3">
-              <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
-            </div>
-        </div>
-        </div>
-        <div class = "row items">
-          <div class="col-xl-4 col-lg-4" >
-            <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-            <strong class = "name">New York, United States &nbsp;</strong>
-          </div>
-        <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-            <div class="progress mb-3">
-              <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100">82%</div>
-            </div>
-        </div>
-        </div>
-        <div class = "row items">
-          <div class="col-xl-4 col-lg-4" >
-            <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-            <strong class = "name">Bali, Indonesia &nbsp;</strong>
-          </div>
-        <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-            <div class="progress mb-3">
-              <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
-            </div>
-        </div>
-        </div>
-        <div class = "row items">
-          <div class="col-xl-4 col-lg-4" >
-            <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-            <strong class = "name">South Island, Newzealand &nbsp;</strong>
-          </div>
-        <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-            <div class="progress mb-3">
-              <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
-            </div>
-        </div>
-        </div>
-        <div class = "row items">
-          <div class="col-xl-4 col-lg-4" >
-            <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-            <strong class = "name">Paris, France &nbsp;</strong>
-          </div>
-        <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-            <div class="progress mb-3">
-              <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
-            </div>
-        </div>
-        </div>
-        <div class = "row items">
-          <div class="col-xl-4 col-lg-4" >
-            <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-            <strong class = "name">Rome, Italy &nbsp;</strong>
-          </div>
-        <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-            <div class="progress mb-3">
-              <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
-            </div>
-        </div>
-        </div>
-        <div class = "row items">
-          <div class="col-xl-4 col-lg-4" >
-            <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-            <strong class = "name">New York, United States &nbsp;</strong>
-          </div>
-        <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-            <div class="progress mb-3">
-              <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100">82%</div>
-            </div>
-        </div>
-        </div>
-        <div class = "row items">
-          <div class="col-xl-4 col-lg-4" >
-            <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-            <strong class = "name">Bali, Indonesia &nbsp;</strong>
-          </div>
-        <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-            <div class="progress mb-3">
-              <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
-            </div>
-        </div>
-        </div>
- 
-          <br/> <br />
-        <div class="card card-hover col-xl-8 col-lg-8 textBatch">
-          <div class="card-body">
-            <h5 class="card-title">View your choices here... 
-              <button onClick = "cpyFunc()" class="btn btn-outline-info btn-icon rounded-circle" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy">
+
+            <div class="row">
+                <div id="itemContainer" class="col-xl-9 col-lg-8 itemsBatch">
+                    <div>
+                        <div class="d-sm-flex align-items-end justify-content-between ps-lg-2 ps-xxl-0 mt-2 mt-lg-0 pt-4 mb-n3">
+                            <div class="me-4">
+                                <h3 class="pb-1">Editor's Choice</h3>
+                                <p class="text-muted fs-lg mb-2">Here are some top hand picked choices from the editor to give personalized recommendations to you!</p>
+                            </div>
+                        </div>
+                        <br/><br/>
+                        <!-- Items Batch 1 -->
+                        <div id="b1"></div>
+
+                        <br/> <br />
+                        <div class="card card-hover col-xl-8 col-lg-8 textBatch">
+                            <div class="card-body">
+                                <h5 class="card-title">View your choices here...
+                                    <button onClick="cpyFunc()" class="btn btn-outline-info btn-icon rounded-circle" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy">
               <i class="bx bx-copy"></i>
             </button></h5>
-            
-            <p class="card-text fs-sm myText">
-            </p>
-            
-          </div>
-        </div>
-        <br /><br />
-      </div>
-        <!-- Items Batch 2-->
-      <div>
-        <div class="d-sm-flex align-items-end justify-content-between ps-lg-2 ps-xxl-0 mt-2 mt-lg-0 pt-4 mb-n3">
-          <div class="me-4">
-            <h3 class="pb-1">Most Viewed by Customers</h3>
-            <p class="text-muted fs-lg mb-2">Here are some most viewed items by the customer to give personalized recommendations to you!</p>
-          </div>
-        </div>
-        
-        <br/><br/>
-        <div class = "row items">
-          <div class="col-xl-4 col-lg-4" >
-            <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-            <strong class = "name">South Island, Newzealand &nbsp;</strong>
-            
-          </div>
-        <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-            <div class="progress mb-3">
-              <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
-            </div>
-        </div>
-        </div>
-        <div class = "row items">
-          <div class="col-xl-4 col-lg-4" >
-            <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-            <strong class = "name">Paris, France &nbsp;</strong>
-          </div>
-        <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-            <div class="progress mb-3">
-              <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
-            </div>
-        </div>
-        </div>
-        <div class = "row items">
-          <div class="col-xl-4 col-lg-4" >
-            <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-            <strong class = "name">Rome, Italy &nbsp;</strong>
-          </div>
-        <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-            <div class="progress mb-3">
-              <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
-            </div>
-        </div>
-        </div>
-        <div class = "row items">
-          <div class="col-xl-4 col-lg-4" >
-            <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-            <strong class = "name">New York, United States &nbsp;</strong>
-          </div>
-        <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-            <div class="progress mb-3">
-              <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100">82%</div>
-            </div>
-        </div>
-        </div>
-        <div class = "row items">
-          <div class="col-xl-4 col-lg-4" >
-            <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-            <strong class = "name">Bali, Indonesia &nbsp;</strong>
-          </div>
-        <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-            <div class="progress mb-3">
-              <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
-            </div>
-        </div>
-        </div>
-        <div class = "row items">
-          <div class="col-xl-4 col-lg-4" >
-            <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-            <strong class = "name">South Island, Newzealand &nbsp;</strong>
-          </div>
-        <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-            <div class="progress mb-3">
-              <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
-            </div>
-        </div>
-        </div>
-        <div class = "row items">
-          <div class="col-xl-4 col-lg-4" >
-            <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-            <strong class = "name">Paris, France &nbsp;</strong>
-          </div>
-        <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-            <div class="progress mb-3">
-              <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
-            </div>
-        </div>
-        </div>
-        <div class = "row items">
-          <div class="col-xl-4 col-lg-4" >
-            <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-            <strong class = "name">Rome, Italy &nbsp;</strong>
-          </div>
-        <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-            <div class="progress mb-3">
-              <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
-            </div>
-        </div>
-        </div>
-        <div class = "row items">
-          <div class="col-xl-4 col-lg-4" >
-            <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-            <strong class = "name">New York, United States &nbsp;</strong>
-          </div>
-        <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-            <div class="progress mb-3">
-              <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100">82%</div>
-            </div>
-        </div>
-        </div>
-        <div class = "row items">
-          <div class="col-xl-4 col-lg-4" >
-            <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-            <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-            <strong class = "name">Bali, Indonesia &nbsp;</strong>
-          </div>
-        <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-            <div class="progress mb-3">
-              <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
-            </div>
-        </div>
-        </div>
- 
-          <br/> <br />
 
-        <div class="card card-hover col-xl-8 col-lg-8 textBatch">
-          <div class="card-body">
-            <h5 class="card-title">View your choices here... 
-              <button onClick = "cpyFunc()" class="btn btn-outline-info btn-icon rounded-circle" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy">
+                                <p class="card-text fs-sm myText">
+                                </p>
+
+                            </div>
+                        </div>
+                        <br /><br />
+                    </div>
+                    <!-- Items Batch 2-->
+                    <div>
+                        <div class="d-sm-flex align-items-end justify-content-between ps-lg-2 ps-xxl-0 mt-2 mt-lg-0 pt-4 mb-n3">
+                            <div class="me-4">
+                                <h3 class="pb-1">Most Viewed by Customers</h3>
+                                <p class="text-muted fs-lg mb-2">Here are some most viewed items by the customer to give personalized recommendations to you!</p>
+                            </div>
+                        </div>
+
+                        <br/><br/>
+                        <div class="row items">
+                            <div class="col-xl-4 col-lg-4">
+                                <input class="form-check-input checks" onClick="myfunc()" type="checkbox">
+                                <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
+                                <strong class="name">South Island, Newzealand &nbsp;</strong>
+
+                            </div>
+                            <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row items">
+                            <div class="col-xl-4 col-lg-4">
+                                <input class="form-check-input checks" onClick="myfunc()" type="checkbox">
+                                <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
+                                <strong class="name">Paris, France &nbsp;</strong>
+                            </div>
+                            <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row items">
+                            <div class="col-xl-4 col-lg-4">
+                                <input class="form-check-input checks" onClick="myfunc()" type="checkbox">
+                                <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
+                                <strong class="name">Rome, Italy &nbsp;</strong>
+                            </div>
+                            <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row items">
+                            <div class="col-xl-4 col-lg-4">
+                                <input class="form-check-input checks" onClick="myfunc()" type="checkbox">
+                                <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
+                                <strong class="name">New York, United States &nbsp;</strong>
+                            </div>
+                            <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100">82%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row items">
+                            <div class="col-xl-4 col-lg-4">
+                                <input class="form-check-input checks" onClick="myfunc()" type="checkbox">
+                                <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
+                                <strong class="name">Bali, Indonesia &nbsp;</strong>
+                            </div>
+                            <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row items">
+                            <div class="col-xl-4 col-lg-4">
+                                <input class="form-check-input checks" onClick="myfunc()" type="checkbox">
+                                <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
+                                <strong class="name">South Island, Newzealand &nbsp;</strong>
+                            </div>
+                            <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row items">
+                            <div class="col-xl-4 col-lg-4">
+                                <input class="form-check-input checks" onClick="myfunc()" type="checkbox">
+                                <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
+                                <strong class="name">Paris, France &nbsp;</strong>
+                            </div>
+                            <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row items">
+                            <div class="col-xl-4 col-lg-4">
+                                <input class="form-check-input checks" onClick="myfunc()" type="checkbox">
+                                <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
+                                <strong class="name">Rome, Italy &nbsp;</strong>
+                            </div>
+                            <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row items">
+                            <div class="col-xl-4 col-lg-4">
+                                <input class="form-check-input checks" onClick="myfunc()" type="checkbox">
+                                <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
+                                <strong class="name">New York, United States &nbsp;</strong>
+                            </div>
+                            <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100">82%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row items">
+                            <div class="col-xl-4 col-lg-4">
+                                <input class="form-check-input checks" onClick="myfunc()" type="checkbox">
+                                <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
+                                <strong class="name">Bali, Indonesia &nbsp;</strong>
+                            </div>
+                            <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br/> <br />
+
+                        <div class="card card-hover col-xl-8 col-lg-8 textBatch">
+                            <div class="card-body">
+                                <h5 class="card-title">View your choices here...
+                                    <button onClick="cpyFunc()" class="btn btn-outline-info btn-icon rounded-circle" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy">
               <i class="bx bx-copy"></i>
             </button></h5>
-            
-            <p class="card-text fs-sm myText">
-            </p>
-            
-          </div>
-        </div>
-        <br /><br />
-      </div>
-    <!-- Items Batch 3-->
 
-    <div>
-      <div class="d-sm-flex align-items-end justify-content-between ps-lg-2 ps-xxl-0 mt-2 mt-lg-0 pt-4 mb-n3">
-        <div class="me-4">
-          <h3 class="pb-1">Viewer's Choice</h3>
-          <p class="text-muted fs-lg mb-2">Here are some top picks based on the viewers choice to give personalized recommendations to you!</p>
-        </div>
-      </div>
-      
-      <br/><br/>
-      <div class = "row items">
-        <div class="col-xl-4 col-lg-4" >
-          <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-          <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-          <strong class = "name">South Island, Newzealand &nbsp;</strong>
-          
-        </div>
-      <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-          <div class="progress mb-3">
-            <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
-          </div>
-      </div>
-      </div>
-      <div class = "row items">
-        <div class="col-xl-4 col-lg-4" >
-          <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-          <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-          <strong class = "name">Paris, France &nbsp;</strong>
-        </div>
-      <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-          <div class="progress mb-3">
-            <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
-          </div>
-      </div>
-      </div>
-      <div class = "row items">
-        <div class="col-xl-4 col-lg-4" >
-          <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-          <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-          <strong class = "name">Rome, Italy &nbsp;</strong>
-        </div>
-      <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-          <div class="progress mb-3">
-            <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
-          </div>
-      </div>
-      </div>
-      <div class = "row items">
-        <div class="col-xl-4 col-lg-4" >
-          <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-          <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-          <strong class = "name">New York, United States &nbsp;</strong>
-        </div>
-      <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-          <div class="progress mb-3">
-            <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100">82%</div>
-          </div>
-      </div>
-      </div>
-      <div class = "row items">
-        <div class="col-xl-4 col-lg-4" >
-          <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-          <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-          <strong class = "name">Bali, Indonesia &nbsp;</strong>
-        </div>
-      <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-          <div class="progress mb-3">
-            <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
-          </div>
-      </div>
-      </div>
-      <div class = "row items">
-        <div class="col-xl-4 col-lg-4" >
-          <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-          <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-          <strong class = "name">South Island, Newzealand &nbsp;</strong>
-        </div>
-      <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-          <div class="progress mb-3">
-            <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
-          </div>
-      </div>
-      </div>
-      <div class = "row items">
-        <div class="col-xl-4 col-lg-4" >
-          <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-          <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-          <strong class = "name">Paris, France &nbsp;</strong>
-        </div>
-      <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-          <div class="progress mb-3">
-            <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
-          </div>
-      </div>
-      </div>
-      <div class = "row items">
-        <div class="col-xl-4 col-lg-4" >
-          <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-          <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-          <strong class = "name">Rome, Italy &nbsp;</strong>
-        </div>
-      <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-          <div class="progress mb-3">
-            <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
-          </div>
-      </div>
-      </div>
-      <div class = "row items">
-        <div class="col-xl-4 col-lg-4" >
-          <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-          <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-          <strong class = "name">New York, United States &nbsp;</strong>
-        </div>
-      <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-          <div class="progress mb-3">
-            <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100">82%</div>
-          </div>
-      </div>
-      </div>
-      <div class = "row items">
-        <div class="col-xl-4 col-lg-4" >
-          <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-          <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-          <strong class = "name">Bali, Indonesia &nbsp;</strong>
-        </div>
-      <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-          <div class="progress mb-3">
-            <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
-          </div>
-      </div>
-      </div>
+                                <p class="card-text fs-sm myText">
+                                </p>
 
-      <br/> <br />
+                            </div>
+                        </div>
+                        <br /><br />
+                    </div>
+                    <!-- Items Batch 3-->
 
-    <div class="card card-hover col-xl-8 col-lg-8 textBatch">
-      <div class="card-body">
-        <h5 class="card-title">View your choices here... 
-          <button onClick = "cpyFunc()" class="btn btn-outline-info btn-icon rounded-circle" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy">
+                    <div>
+                        <div class="d-sm-flex align-items-end justify-content-between ps-lg-2 ps-xxl-0 mt-2 mt-lg-0 pt-4 mb-n3">
+                            <div class="me-4">
+                                <h3 class="pb-1">Viewer's Choice</h3>
+                                <p class="text-muted fs-lg mb-2">Here are some top picks based on the viewers choice to give personalized recommendations to you!</p>
+                            </div>
+                        </div>
+
+                        <br/><br/>
+                        <div class="row items">
+                            <div class="col-xl-4 col-lg-4">
+                                <input class="form-check-input checks" onClick="myfunc()" type="checkbox">
+                                <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
+                                <strong class="name">South Island, Newzealand &nbsp;</strong>
+
+                            </div>
+                            <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row items">
+                            <div class="col-xl-4 col-lg-4">
+                                <input class="form-check-input checks" onClick="myfunc()" type="checkbox">
+                                <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
+                                <strong class="name">Paris, France &nbsp;</strong>
+                            </div>
+                            <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row items">
+                            <div class="col-xl-4 col-lg-4">
+                                <input class="form-check-input checks" onClick="myfunc()" type="checkbox">
+                                <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
+                                <strong class="name">Rome, Italy &nbsp;</strong>
+                            </div>
+                            <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row items">
+                            <div class="col-xl-4 col-lg-4">
+                                <input class="form-check-input checks" onClick="myfunc()" type="checkbox">
+                                <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
+                                <strong class="name">New York, United States &nbsp;</strong>
+                            </div>
+                            <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100">82%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row items">
+                            <div class="col-xl-4 col-lg-4">
+                                <input class="form-check-input checks" onClick="myfunc()" type="checkbox">
+                                <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
+                                <strong class="name">Bali, Indonesia &nbsp;</strong>
+                            </div>
+                            <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row items">
+                            <div class="col-xl-4 col-lg-4">
+                                <input class="form-check-input checks" onClick="myfunc()" type="checkbox">
+                                <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
+                                <strong class="name">South Island, Newzealand &nbsp;</strong>
+                            </div>
+                            <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row items">
+                            <div class="col-xl-4 col-lg-4">
+                                <input class="form-check-input checks" onClick="myfunc()" type="checkbox">
+                                <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
+                                <strong class="name">Paris, France &nbsp;</strong>
+                            </div>
+                            <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row items">
+                            <div class="col-xl-4 col-lg-4">
+                                <input class="form-check-input checks" onClick="myfunc()" type="checkbox">
+                                <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
+                                <strong class="name">Rome, Italy &nbsp;</strong>
+                            </div>
+                            <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row items">
+                            <div class="col-xl-4 col-lg-4">
+                                <input class="form-check-input checks" onClick="myfunc()" type="checkbox">
+                                <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
+                                <strong class="name">New York, United States &nbsp;</strong>
+                            </div>
+                            <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100">82%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row items">
+                            <div class="col-xl-4 col-lg-4">
+                                <input class="form-check-input checks" onClick="myfunc()" type="checkbox">
+                                <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
+                                <strong class="name">Bali, Indonesia &nbsp;</strong>
+                            </div>
+                            <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br/> <br />
+
+                        <div class="card card-hover col-xl-8 col-lg-8 textBatch">
+                            <div class="card-body">
+                                <h5 class="card-title">View your choices here...
+                                    <button onClick="cpyFunc()" class="btn btn-outline-info btn-icon rounded-circle" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy">
           <i class="bx bx-copy"></i>
         </button></h5>
-        
-        <p class="card-text fs-sm myText">
-        </p>
-        
-      </div>
-    </div>
-    <br /><br />
-    </div>
 
-    <!-- Items Batch 4-->
-<div>
-  <div class="d-sm-flex align-items-end justify-content-between ps-lg-2 ps-xxl-0 mt-2 mt-lg-0 pt-4 mb-n3">
-    <div class="me-4">
-      <h3 class="pb-1">Reviewer's Choice</h3>
-      <p class="text-muted fs-lg mb-2">Here are some top picks based on the viewers choice to give personalized recommendations to you!</p>
-    </div>
-  </div>
-  <br/><br/>
-  <div class = "row items">
-    <div class="col-xl-4 col-lg-4" >
-      <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-      <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-      <strong class = "name">South Island, Newzealand &nbsp;</strong>
-      
-    </div>
-  <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-      <div class="progress mb-3">
-        <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
-      </div>
-  </div>
-  </div>
-  <div class = "row items">
-    <div class="col-xl-4 col-lg-4" >
-      <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-      <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-      <strong class = "name">Paris, France &nbsp;</strong>
-    </div>
-  <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-      <div class="progress mb-3">
-        <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
-      </div>
-  </div>
-  </div>
-  <div class = "row items">
-    <div class="col-xl-4 col-lg-4" >
-      <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-      <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-      <strong class = "name">Rome, Italy &nbsp;</strong>
-    </div>
-  <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-      <div class="progress mb-3">
-        <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
-      </div>
-  </div>
-  </div>
-  <div class = "row items">
-    <div class="col-xl-4 col-lg-4" >
-      <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-      <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-      <strong class = "name">New York, United States &nbsp;</strong>
-    </div>
-  <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-      <div class="progress mb-3">
-        <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100">82%</div>
-      </div>
-  </div>
-  </div>
-  <div class = "row items">
-    <div class="col-xl-4 col-lg-4" >
-      <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-      <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-      <strong class = "name">Bali, Indonesia &nbsp;</strong>
-    </div>
-  <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-      <div class="progress mb-3">
-        <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
-      </div>
-  </div>
-  </div>
-  <div class = "row items">
-    <div class="col-xl-4 col-lg-4" >
-      <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-      <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-      <strong class = "name">South Island, Newzealand &nbsp;</strong>
-    </div>
-  <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-      <div class="progress mb-3">
-        <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
-      </div>
-  </div>
-  </div>
-  <div class = "row items">
-    <div class="col-xl-4 col-lg-4" >
-      <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-      <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-      <strong class = "name">Paris, France &nbsp;</strong>
-    </div>
-  <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-      <div class="progress mb-3">
-        <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
-      </div>
-  </div>
-  </div>
-  <div class = "row items">
-    <div class="col-xl-4 col-lg-4" >
-      <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-      <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-      <strong class = "name">Rome, Italy &nbsp;</strong>
-    </div>
-  <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-      <div class="progress mb-3">
-        <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
-      </div>
-  </div>
-  </div>
-  <div class = "row items">
-    <div class="col-xl-4 col-lg-4" >
-      <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-      <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-      <strong class = "name">New York, United States &nbsp;</strong>
-    </div>
-  <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-      <div class="progress mb-3">
-        <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100">82%</div>
-      </div>
-  </div>
-  </div>
-  <div class = "row items">
-    <div class="col-xl-4 col-lg-4" >
-      <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
-      <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
-      <strong class = "name">Bali, Indonesia &nbsp;</strong>
-    </div>
-  <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
-      <div class="progress mb-3">
-        <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
-      </div>
-  </div>
-  </div>
+                                <p class="card-text fs-sm myText">
+                                </p>
 
-      <br/> <br />
+                            </div>
+                        </div>
+                        <br /><br />
+                    </div>
 
-    <div class="card card-hover col-xl-8 col-lg-8 textBatch">
-      <div class="card-body">
-        <h5 class="card-title">View your choices here... 
-          <button onClick = "cpyFunc()" class="btn btn-outline-info btn-icon rounded-circle" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy">
+                    <!-- Items Batch 4-->
+                    <div>
+                        <div class="d-sm-flex align-items-end justify-content-between ps-lg-2 ps-xxl-0 mt-2 mt-lg-0 pt-4 mb-n3">
+                            <div class="me-4">
+                                <h3 class="pb-1">Reviewer's Choice</h3>
+                                <p class="text-muted fs-lg mb-2">Here are some top picks based on the viewers choice to give personalized recommendations to you!</p>
+                            </div>
+                        </div>
+                        <br/><br/>
+                        <div class="row items">
+                            <div class="col-xl-4 col-lg-4">
+                                <input class="form-check-input checks" onClick="myfunc()" type="checkbox">
+                                <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
+                                <strong class="name">South Island, Newzealand &nbsp;</strong>
+
+                            </div>
+                            <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row items">
+                            <div class="col-xl-4 col-lg-4">
+                                <input class="form-check-input checks" onClick="myfunc()" type="checkbox">
+                                <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
+                                <strong class="name">Paris, France &nbsp;</strong>
+                            </div>
+                            <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row items">
+                            <div class="col-xl-4 col-lg-4">
+                                <input class="form-check-input checks" onClick="myfunc()" type="checkbox">
+                                <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
+                                <strong class="name">Rome, Italy &nbsp;</strong>
+                            </div>
+                            <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row items">
+                            <div class="col-xl-4 col-lg-4">
+                                <input class="form-check-input checks" onClick="myfunc()" type="checkbox">
+                                <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
+                                <strong class="name">New York, United States &nbsp;</strong>
+                            </div>
+                            <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100">82%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row items">
+                            <div class="col-xl-4 col-lg-4">
+                                <input class="form-check-input checks" onClick="myfunc()" type="checkbox">
+                                <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
+                                <strong class="name">Bali, Indonesia &nbsp;</strong>
+                            </div>
+                            <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row items">
+                            <div class="col-xl-4 col-lg-4">
+                                <input class="form-check-input checks" onClick="myfunc()" type="checkbox">
+                                <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
+                                <strong class="name">South Island, Newzealand &nbsp;</strong>
+                            </div>
+                            <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row items">
+                            <div class="col-xl-4 col-lg-4">
+                                <input class="form-check-input checks" onClick="myfunc()" type="checkbox">
+                                <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
+                                <strong class="name">Paris, France &nbsp;</strong>
+                            </div>
+                            <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row items">
+                            <div class="col-xl-4 col-lg-4">
+                                <input class="form-check-input checks" onClick="myfunc()" type="checkbox">
+                                <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
+                                <strong class="name">Rome, Italy &nbsp;</strong>
+                            </div>
+                            <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row items">
+                            <div class="col-xl-4 col-lg-4">
+                                <input class="form-check-input checks" onClick="myfunc()" type="checkbox">
+                                <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
+                                <strong class="name">New York, United States &nbsp;</strong>
+                            </div>
+                            <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100">82%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row items">
+                            <div class="col-xl-4 col-lg-4">
+                                <input class="form-check-input checks" onClick="myfunc()" type="checkbox">
+                                <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
+                                <strong class="name">Bali, Indonesia &nbsp;</strong>
+                            </div>
+                            <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br/> <br />
+
+                        <div class="card card-hover col-xl-8 col-lg-8 textBatch">
+                            <div class="card-body">
+                                <h5 class="card-title">View your choices here...
+                                    <button onClick="cpyFunc()" class="btn btn-outline-info btn-icon rounded-circle" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy">
           <i class="bx bx-copy"></i>
         </button></h5>
-        
-        <p class="card-text fs-sm myText">
-        </p>
-        
-      </div>
-    </div>
-    <br /><br />
-        
-          </div>
-        
-          
-        </div>
-        
-         <!-- Pagination 
+
+                                <p class="card-text fs-sm myText">
+                                </p>
+
+                            </div>
+                        </div>
+                        <br /><br />
+
+                    </div>
+
+
+                </div>
+
+                <!-- Pagination 
         <ul>
             <div class="holder pagination justify-content-center pt-lg-3 pt-1">
             <li class="page-item">
@@ -951,9 +839,9 @@
         </div>
           </ul> -->
 
-        <br/>
-        <br/>
-        <!--
+                <br/>
+                <br/>
+                <!--
           <div class = "row ">
             <div class="card card-hover col-xl-6 col-lg-6">
               <div class="card-body">
@@ -991,59 +879,61 @@
           </div>
           
           -->
-      </section>
+        </section>
 
     </main>
 
-    
+
 
     <!-- Footer -->
     <footer class="footer dark-mode bg-dark pt-5 pb-4 pb-lg-5">
-      <div class="container pt-lg-4">
-        <div class="row pb-5">
-          <div class="col-lg-4 col-md-6">
-            <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
-              RATE
+        <div class="container pt-lg-4">
+            <div class="row pb-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
+                        RATE
+                    </div>
+                    <p class="fs-sm text-light opacity-70 pb-lg-3 mb-4">Find the best things in the world. E X P L O R E the world with us! </p>
+                </div>
+                <div class="col-xl-6 col-lg-7 col-md-5 offset-xl-2 offset-md-1 pt-4 pt-md-1 pt-lg-0">
+
+                    <div id="footer-links" class="row">
+                        <div class="d-flex justify-content-center pt-4 mt-lg-3">
+                            <a href="#" class="btn btn-icon btn-secondary btn-facebook mx-2">
+                                <i class="bx bxl-facebook"></i>
+                            </a>
+                            <a href="#" class="btn btn-icon btn-secondary btn-google mx-2">
+                                <i class="bx bxl-google"></i>
+                            </a>
+                            <a href="#" class="btn btn-icon btn-secondary btn-instagram mx-2">
+                                <i class="bx bxl-instagram"></i>
+                            </a>
+
+                            <a href="#" class="btn btn-icon btn-secondary btn-youtube mx-2">
+                                <i class="bx bxl-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p class="fs-sm text-light opacity-70 pb-lg-3 mb-4">Find the best things in the world. E X P L O R E the world with us! </p>
-          </div>
-          <div class="col-xl-6 col-lg-7 col-md-5 offset-xl-2 offset-md-1 pt-4 pt-md-1 pt-lg-0">
-            
-            <div id="footer-links" class="row">
-                <div class="d-flex justify-content-center pt-4 mt-lg-3">
-                    <a href="#" class="btn btn-icon btn-secondary btn-facebook mx-2">
-                      <i class="bx bxl-facebook"></i>
-                    </a>
-                    <a href="#" class="btn btn-icon btn-secondary btn-google mx-2">
-                        <i class="bx bxl-google"></i>
-                      </a>
-                    <a href="#" class="btn btn-icon btn-secondary btn-instagram mx-2">
-                      <i class="bx bxl-instagram"></i>
-                    </a>
-                    
-                    <a href="#" class="btn btn-icon btn-secondary btn-youtube mx-2">
-                      <i class="bx bxl-youtube"></i>
-                    </a>
-                  </div>
-            </div>
-          </div>
         </div>
-      </div>
     </footer>
 
 
     <!-- Back to top button -->
     <a href="#top" class="btn-scroll-top" data-scroll>
-      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
-      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+        <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+        <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
     </a>
 
-    
+
     <!-- Vendor Scripts -->
     <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 
     <!-- Main Theme Script -->
     <script src="assets/js/theme.min.js"></script>
-  </body>
+    <script src="assets/js/update.js"></script>
+</body>
+
 </html>
