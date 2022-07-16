@@ -2,11 +2,13 @@ fetch("http://127.0.0.1:5500/Ratings-Website/data.json")
     .then(response => response.json())
     .then(data => {
         console.log(typeof data)
-        let arr = data.ratings;
-        let mostViewed = [];
+        const arr = data.ratings;
+
+        let mostViewed = arr;
         let editorsChoice = [];
         let viewersChoice = [];
         let reviewersChoice = [];
+
         for (const i of data.ratings) {
             switch (i.choiceBy) {
                 case "editorsChoice":
@@ -21,15 +23,16 @@ fetch("http://127.0.0.1:5500/Ratings-Website/data.json")
             }
 
         }
-        arr.sort((a, b) => {
+        mostViewed.sort((a, b) => {
             return b.views - a.views;
         })
-        for (const i of arr) {
+        mostViewed = mostViewed.slice(0, 10);
+        for (const i of mostViewed) {
             document.getElementById("mostViewed").innerHTML += getDocViews(i.name, i.views, arr[0].views);
         }
-        addData({ name: "viewersChoice", arr: viewersChoice });
-        addData({ name: "reviewersChoice", arr: reviewersChoice });
-        addData({ name: "editorsChoice", arr: editorsChoice });
+        addData({ name: "viewersChoice", arr: viewersChoice.slice(0, 10) });
+        addData({ name: "reviewersChoice", arr: reviewersChoice.slice(0, 10) });
+        addData({ name: "editorsChoice", arr: editorsChoice.slice(0, 10) });
     });
 
 function addData(data) {
