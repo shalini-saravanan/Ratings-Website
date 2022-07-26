@@ -221,6 +221,26 @@ form.gsc-search-box {
 
     <!--CheckBox Scripts-->
     <script>
+        function searchFunc() {
+            var txtVal;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+
+            const divs = document.getElementById("itemContainer");
+            const items = document.querySelectorAll(".items");
+
+            for (let i = 0; i < items.length; i++) {
+                const names = items[i].getElementsByTagName("strong")[0];
+                txtVal = names.innerText;
+                if (txtVal.toUpperCase().indexOf(filter) > -1) {
+                    items[i].style.display = "";
+                } else {
+                    items[i].style.display = "none";
+                }
+            }
+
+        }
+
         function cpyFunc() {
             const cpyText = document.querySelectorAll(".myText")[0];
             navigator.clipboard.writeText(cpyText.innerText);
@@ -395,6 +415,13 @@ form.gsc-search-box {
                 &nbsp; Details
               </a> -->
                 </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="input-group">
+                        <input type="text" id="myInput" onkeyup="searchFunc()" class="form-control pe-5 rounded" placeholder="Search the items...">
+                        <i class="bx bx-search position-absolute top-50 end-0 translate-middle-y me-3 zindex-5 fs-lg"></i>
+                    </div>
+                </div>
+
             </div>
 
             <!-- Modal Content
