@@ -39,6 +39,7 @@
 
     <!-- Page loading styles -->
     <style>
+        ul li:hover {color: #6366f1;}
         .page-loading {
             position: fixed;
             top: 0;
@@ -132,11 +133,22 @@
             root = document.getElementsByTagName('html')[0];
         if (mode !== null && mode === 'dark') {
             root.classList.add('dark-mode');
+            var src = "https://cse.google.com/cse.js?cx=91b1e72ed013b451a";
+            //addScript(src);
+            console.log("dark");
         } else {
             root.classList.remove('dark-mode');
         }
-    </script>
-
+        //addScript("https://cse.google.com/cse.js?cx=91b1e72ed013b451a");
+        function addScript( src ) {
+            var s = document.createElement( 'script' );
+            s.setAttribute( 'src', src );
+            s.setAttribute('async','async');
+            document.head.appendChild( s );
+        }
+</script>
+    <!-- <script src="https://cse.google.com/cse.js?cx=91b1e72ed013b451a"></script>
+     -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
     <!-- Page loading scripts -->
@@ -220,8 +232,7 @@
 
         }
     </script>
-    <script async src="https://cse.google.com/cse.js?cx=5c2828add8b05a012">
-    </script>
+    
 
 </head>
 
@@ -305,8 +316,18 @@
                 &nbsp; Details
               </a> -->
                 </div>
-                
+                <!-- Basic list group -->
 
+
+            </div>
+            <div class="col-xl-9 col-lg-8">
+            <ul class="list-group">
+                <li class="list-group-item active" ><b>Quick Links</b></li>
+                <a href = "#editorsChoice" style ="text-decoration: none;"><li class="list-group-item">Editor's Choice</li></a>
+                <a href = "#mostViewed" style ="text-decoration: none;"><li class="list-group-item" >Most viewed by Customers</li></a>
+                <a href = "#viewersChoice" style ="text-decoration: none;"><li class="list-group-item" >Viewer's Choice</li></a>
+                <a href = "#reviewersChoice" style ="text-decoration: none;"><li class="list-group-item" >Reviewer's Choice</li></a>
+              </ul>
             </div>
 
             <!-- Modal Content
@@ -337,7 +358,7 @@
 
             <div class="row">
                 <div id="itemContainer" class="col-xl-9 col-lg-8 itemsBatch">
-                    <div>
+                    <div id= "editorsChoice">
                         <div class="d-sm-flex align-items-end justify-content-between ps-lg-2 ps-xxl-0 mt-2 mt-lg-0 pt-4 mb-n3">
                             <div class="me-4">
                                 <h3 class="pb-1">Editor's Choice</h3>
@@ -364,7 +385,7 @@
                         <br /><br />
                     </div>
                     <!-- Items Batch 2-->
-                    <div>
+                    <div id = "mostViewed">
                         <div class="d-sm-flex align-items-end justify-content-between ps-lg-2 ps-xxl-0 mt-2 mt-lg-0 pt-4 mb-n3">
                             <div class="me-4">
                                 <h3 class="pb-1">Most Viewed by Customers</h3>
@@ -392,7 +413,7 @@
                     </div>
                     <!-- Items Batch 3-->
 
-                    <div>
+                    <div id = "viewersChoice">
                         <div class="d-sm-flex align-items-end justify-content-between ps-lg-2 ps-xxl-0 mt-2 mt-lg-0 pt-4 mb-n3">
                             <div class="me-4">
                                 <h3 class="pb-1">Viewer's Choice</h3>
@@ -420,7 +441,7 @@
                     </div>
 
                     <!-- Items Batch 4-->
-                    <div>
+                    <div id = "reviewersChoice">
                         <div class="d-sm-flex align-items-end justify-content-between ps-lg-2 ps-xxl-0 mt-2 mt-lg-0 pt-4 mb-n3">
                             <div class="me-4">
                                 <h3 class="pb-1">Reviewer's Choice</h3>
