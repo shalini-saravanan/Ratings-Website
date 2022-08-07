@@ -1,4 +1,4 @@
-fetch("http://127.0.0.1:5500/Ratings-Website/data.json")
+fetch("https://ratings-website.b-cdn.net/data.json")
     .then(response => response.json())
     .then(data => {
         console.log(typeof data)
