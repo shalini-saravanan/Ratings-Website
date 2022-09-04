@@ -38,7 +38,7 @@
 
     <!-- Vendor Styles -->
     <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css" />
-    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css" />
+
 
     <!-- Main Theme Styles + Bootstrap -->
     <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
@@ -59,10 +59,6 @@
             opacity: 0;
             visibility: hidden;
             z-index: 9999;
-        }
-        
-        .dark-mode .page-loading {
-            background-color: #0b0f19;
         }
         
         .page-loading.active {
@@ -94,10 +90,6 @@
             color: #9397ad;
         }
         
-        .dark-mode .page-loading-inner>span {
-            color: #fff;
-            opacity: .6;
-        }
         
         .page-spinner {
             display: inline-block;
@@ -110,11 +102,6 @@
             border-radius: 50%;
             -webkit-animation: spinner .75s linear infinite;
             animation: spinner .75s linear infinite;
-        }
-        
-        .dark-mode .page-spinner {
-            border-color: rgba(255, 255, 255, .4);
-            border-right-color: transparent;
         }
         
         @-webkit-keyframes spinner {
@@ -132,15 +119,8 @@
         }
     </style>
 
-    <!-- Theme mode -->
-    <script>
-        let mode = window.localStorage.getItem('mode'),
-            root = document.getElementsByTagName('html')[0];
-        if (mode !== null && mode === 'dark') {
-            root.classList.add('dark-mode');
-        } else {
-            root.classList.remove('dark-mode');
-        }
+   
+    <script async src="https://cse.google.com/cse.js?cx=5c2828add8b05a012">
     </script>
 
     <!-- Page loading scripts -->
@@ -155,9 +135,27 @@
             };
         })();
     </script>
-    <!-- <script async src="https://cse.google.com/cse.js?cx=5c2828add8b05a012">
-    </script> -->
+    <script>
+        function funb() {
+            if (navigator.share) {
+                navigator.share({
+  
+                    title: 'Top Travel Destinations',
+                    url: 'https://travelratingsv1.b-cdn.net/'
+                }).then(() => {
+                    console.log('Thanks for sharing!');
+                }).catch(err => {
+  
+                    console.log(
+                    "Error while using Web share API:");
+                    console.log(err);
+                });
+            } else {
+                window.alert("Browser doesn't support sharing !");
+            }
+        }
 
+    </script>
 </head>
 
 
@@ -178,7 +176,7 @@
 
 
         <!-- Navbar -->
-        <header class="header navbar navbar-expand-lg bg-light shadow-sm shadow-dark-mode-none fixed-top">
+        <header class="header navbar navbar-expand-lg bg-light shadow-sm fixed-top">
             <div class="container px-3">
                 <a href="index.html" class="navbar-brand pe-3">
             RATE
@@ -201,17 +199,14 @@
                             </li>
                         </ul>
                     </div>
+                    
                 </div>
-                <div class="gcse-search"><i class="bx bx-search position-absolute top-50 end-0 translate-middle-y me-3 zindex-5 fs-lg"></i></div>
-                <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
-                    <input type="checkbox" class="form-check-input" id="theme-mode">
-                    <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
-                    <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
-                </div>
+                
                 <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-
+          <div class="gcse-search"></div>
+               
             </div>
         </header>
 
@@ -219,17 +214,11 @@
         <!-- Page container -->
         <section class="position-relative pt-5 py-lg-5 mt-3 mt-md-4">
 
-            <!-- Swiper tabs (Project images) -->
-            <div class="swiper-tabs position-md-absolute top-0 end-0 w-md-50 h-100">
-                <div id="project-1" class="swiper-tab position-md-absolute w-100 h-100 bg-position-center bg-repeat-0 bg-size-cover active" style="background-image: url(assets/img/slider/01.jpg);">
+            <div class="position-md-absolute top-0 end-0 w-md-50 h-100">
+                <div id="p1" class="position-md-absolute w-100 h-100 bg-position-center bg-repeat-0 bg-size-cover active" style="background-image: url(assets/img/slider/01.jpg);">
                     <div class="ratio ratio-1x1"></div>
                 </div>
-                <div id="project-2" class="swiper-tab position-md-absolute w-100 h-100 bg-position-center bg-repeat-0 bg-size-cover" style="background-image: url(assets/img/slider/02.jpg);">
-                    <div class="ratio ratio-1x1"></div>
-                </div>
-                <div id="project-3" class="swiper-tab position-md-absolute w-100 h-100 bg-position-center bg-repeat-0 bg-size-cover" style="background-image: url(assets/img/slider/03.jpg);">
-                    <div class="ratio ratio-1x1"></div>
-                </div>
+                
             </div>
 
 
@@ -240,24 +229,9 @@
                         <!-- Project description (Slider) -->
                         <div class="d-none d-lg-block" style="height: 160px;"></div>
                         <div class="d-none d-md-block d-lg-none" style="height: 80px;"></div>
-                        <div class="swiper pt-4 pt-md-0" data-swiper-options='{
-                "spaceBetween": 30,
-                "loop": true,
-                "tabs": true,
-                "pagination": {
-                  "el": ".swiper-pagination",
-                  "type": "fraction"
-                },
-                "navigation": {
-                  "prevEl": ".btn-prev",
-                  "nextEl": ".btn-next"
-                }
-              }'>
-                            <div class="swiper-wrapper">
-
-                                <!-- Item -->
-                                <div class="swiper-slide" data-swiper-tab="#project-1">
-                                    <h1 class="h1 mb-4">RATE THE YOUR WORLD!</h1>
+                        
+                                <div>
+                                    <h1 class="h1 mb-4">RATE YOUR WORLD!</h1>
                                     <p class="pb-3 mb-3">It is always good to plan your trip to a place that you have never been before. Do not go alone; you will surely get lost and may not have the right information. Check out the best places to visit in a foreign country
                                         and make a perfect plan.</p>
                                     <table class="mb-5">
@@ -274,79 +248,234 @@
                                         </tbody>
                                     </table>
                                 </div>
-
-                                <!-- Item -->
-                                <div class="swiper-slide" data-swiper-tab="#project-2">
-                                    <h2 class="h1 mb-4">See what tops the list!</h2>
-                                    <p class="pb-3 mb-3">If you want to start a new adventure, you better know what things are worth giving a try before you set out. Traveling is a great experience, but it can also be a stressful one. You need to know what things are worth
-                                        your time and money, and what you should avoid at all costs. You should never worry about the odds of success, instead you should focus on the odds of failure. Cheap trips, low-quality tours, and bad experiences
-                                        are
-                                    </p>
-                                    <a href="progress.html" class="btn btn-primary shadow-primary mt-n2">View Ratings</a>
-                                </div>
-
-                                <!-- Item -->
-                                <div class="swiper-slide" data-swiper-tab="#project-3">
-                                    <h2 class="h1 mb-4">EXPLORE the World!</h2>
-                                    <p class="pb-3 mb-3">When you are travelling, you have a ton of choices to make. You can choose your hotel, where you would like to go, where you would like to eat, how far you want to go and so on. There are so many options that it can
-                                        become very overwhelming. It can be good to know what to expect and what to expect from the trip. Here are some tips you can use to make the most out of your trip: Plan your trip in</p>
-
-                                    <a href="progress.html" class="btn btn-primary shadow-primary mt-n2">View Ratings</a>
-                                </div>
-                            </div>
-
-                            <!-- Prev / Next buttons + Counter -->
-                            <div class="d-flex align-items-center ps-2 pb-5">
-                                <button type="button" class="btn btn-prev btn-icon btn-sm position-static">
-                    <i class="bx bx-chevron-left"></i>
-                  </button>
-                                <div class="swiper-pagination position-static w-auto mx-3" style="min-width: 30px;"></div>
-                                <button type="button" class="btn btn-next btn-icon btn-sm position-static">
-                    <i class="bx bx-chevron-right"></i>
-                  </button>
-                            </div>
-                        </div>
+                         
                     </div>
                 </div>
             </div>
+            
         </section>
+        <section class="container mb-5 py-lg-5">
+            <h2 class="h1 mb-4 pb-3 text-center">Latest From Our Blog</h2>
+            <p class="mb-4 mx-auto pb-3 fs-lg text-center" style="max-width: 636px;">See the featured blogs and choose out the best things for you. </p>
+            <div class="row">
+              <div class="col-lg-5 col-12 mb-lg-0 mb-4">
+  
+                <!-- Article -->
+                <article class="card h-100 border-0 shadow-sm">
+                  <div class="position-relative">
+                    <a href="progress.html" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+                    <img src="assets/img/category/01.jpg" class="card-img-top" alt="Image">
+                  </div>
+                  <div class="card-body pb-4">
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                      <a class="badge fs-sm text-nav bg-secondary text-decoration-none">Top</a>
+                      <div onclick="funb()" ><a class="badge fs-sm text-nav bg-secondary text-decoration-none"><i class="bx bx-share-alt fs-lg me-1"></i></a></div>
+                    </div>
+                    <h3 class="h5 mb-0">
+                      <a href="progress.html">Top travel tourist destinations to visit must in your lifetime!</a>
+                    </h3>
+                    <hr class="my-4">
+                    <span class="fs-sm text-muted">Check out the best places to visit in a foreign country and make a perfect plan.</span>
+                  </div>
+                 
+                </article>
+              </div>
+              <div class="col">
+  
+                <!-- Article -->
+                <article class="card border-0 shadow-sm overflow-hidden mb-4">
+                  <div class="row g-0">
+                    <div class="col-sm-5 position-relative bg-position-center bg-repeat-0 bg-size-cover" style="background-image: url(assets/img/category/03.jpg); min-height: 15rem;">
+                      <a href="progress.html" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+                    </div>
+                    <div class="col-sm-7">
+                      <div class="card-body">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                          <a class="badge fs-sm text-nav bg-secondary text-decoration-none">High viewed</a>
+                          <div onclick="funb()" ><a class="badge fs-sm text-nav bg-secondary text-decoration-none"><i class="bx bx-share-alt fs-lg me-1"></i></a></div>
+                        </div>
+                        <h3 class="h5">
+                            <a href="progress.html">Top travel tourist destinations to visit must in your lifetime!</a>
+                        </h3>
+                        <hr class="my-4">
+                        <span class="fs-sm text-muted">Check out the best places to visit in a foreign country and make a perfect plan.</span>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+  
+                <!-- Article -->
+                <article class="card border-0 shadow-sm overflow-hidden">
+                    <div class="row g-0">
+                      <div class="col-sm-5 position-relative bg-position-center bg-repeat-0 bg-size-cover" style="background-image: url(assets/img/category/02.jpg); min-height: 15rem;">
+                        <a href="progress.html" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+                      </div>
+                      <div class="col-sm-7">
+                        <div class="card-body">
+                          <div class="d-flex align-items-center justify-content-between mb-3">
+                            <a class="badge fs-sm text-nav bg-secondary text-decoration-none">High viewed</a>
+                            <div onclick="funb()" ><a class="badge fs-sm text-nav bg-secondary text-decoration-none"><i class="bx bx-share-alt fs-lg me-1"></i></a></div>
+                          </div>
+                          <h3 class="h5">
+                              <a href="progress.html">Top travel tourist destinations to visit must in your lifetime!</a>
+                          </h3>
+                          <hr class="my-4">
+                          <span class="fs-sm text-muted">Check out the best places to visit in a foreign country and make a perfect plan.</span>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+              </div>
+            </div>
+          </section>
+          <section class="container py-5 mb-lg-2">
+            <div class="row py-2 py-md-4 py-lg-5">
+              <div class="col-xl-4 col-md-5 text-center text-md-start pt-md-2 pb-2 pb-md-0 mb-4 mb-md-0">
+                <h2 class="pb-3 mb-1 mb-lg-3">Have Doubts? <br class="d-none d-md-inline">Check out the FAQs</h2>
+                <p class="fs-lg pb-3 mb-2 mb-lg-3">Still have unanswered questions and need to get in touch?</p>
+                <div class="row row-cols-1 row-cols-sm-2 g-3 g-sm-4">
+                  <div class="col">
+                    <div class="card card-hover">
+                      <div class="card-body pb-3">
+                        <i class="bx bxs-phone-call d-block fs-2 text-primary mb-2 py-1"></i>
+                        <p class="fs-sm mb-2">Still have queries?</p>
+                        <a href="tel:0000000000" class="btn btn-link stretched-link px-0">
+                          Call us
+                          <i class="bx bx-right-arrow-alt fs-xl ms-2"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card card-hover">
+                      <div class="card-body pb-3">
+                        <i class="bx bx-message-rounded-dots d-block fs-2 text-success mb-2 py-1"></i>
+                        <p class="fs-sm mb-2">Still have queries?</p>
+                        <a href="mailto:example@gmail.com" class="btn btn-link text-success stretched-link px-0">
+                          Mail us
+                          <i class="bx bx-right-arrow-alt fs-xl ms-2"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-7 offset-xl-1">
+                <div class="accordion" id="faq">
+                  <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+                    <h2 class="accordion-header" id="q1-heading">
+                      <button class="accordion-button shadow-none rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="true" aria-controls="q1">
+                        How the order of rating can be done in each category?
+                      </button>
+                    </h2>
+                    <div id="q1" class="accordion-collapse collapse show" aria-labelledby="q1-heading" data-bs-parent="#faq">
+                      <div class="accordion-body fs-sm pt-0">
+                        <p>Our rating algorithm will take the people reviews, quality, factors of excellence and comments into consideration and arrange the items in each category in the specified order.</p>
+                        <p class="mb-0">As our algorithm is based on AI and deep learning, it is up to date and efficient.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+                    <h2 class="accordion-header" id="q2-heading">
+                      <button class="accordion-button shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                        How the order of rating can be done in each category?
+                      </button>
+                    </h2>
+                    <div id="q2" class="accordion-collapse collapse" aria-labelledby="q2-heading" data-bs-parent="#faq">
+                      <div class="accordion-body fs-sm pt-0">
+                        <p>Our rating algorithm will take the people reviews, quality, factors of excellence and comments into consideration and arrange the items in each category in the specified order.</p>
+                        <p class="mb-0">As our algorithm is based on AI and deep learning, it is up to date and efficient.</p>  
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+                    <h2 class="accordion-header" id="q3-heading">
+                      <button class="accordion-button shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                        How the order of rating can be done in each category?
+                      </button>
+                    </h2>
+                    <div id="q3" class="accordion-collapse collapse" aria-labelledby="q3-heading" data-bs-parent="#faq">
+                      <div class="accordion-body fs-sm pt-0">
+                        <p>Our rating algorithm will take the people reviews, quality, factors of excellence and comments into consideration and arrange the items in each category in the specified order.</p>
+                        <p class="mb-0">As our algorithm is based on AI and deep learning, it is up to date and efficient.</p>  
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+                    <h2 class="accordion-header" id="q4-heading">
+                      <button class="accordion-button shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                        How the order of rating can be done in each category?
+                      </button>
+                    </h2>
+                    <div id="q4" class="accordion-collapse collapse" aria-labelledby="q4-heading" data-bs-parent="#faq">
+                      <div class="accordion-body fs-sm pt-0">
+                        <p>Our rating algorithm will take the people reviews, quality, factors of excellence and comments into consideration and arrange the items in each category in the specified order.</p>
+                        <p class="mb-0">As our algorithm is based on AI and deep learning, it is up to date and efficient.</p>  
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </section>
     </main>
 
 
     <!-- Footer -->
-    <footer class="footer dark-mode bg-dark pt-5 pb-4 pb-lg-5">
+    
+    <footer class="footer dark-mode bg-dark border-top border-light pt-5 pb-4 pb-lg-5">
         <div class="container pt-lg-4">
-            <div class="row pb-5">
-                <div class="col-lg-4 col-md-6">
-                    <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
-                        RATE
-                    </div>
-                    <p class="fs-sm text-light opacity-70 pb-lg-3 mb-4">You can use this to find items that have the most ratings, and rank the ones you want to see. These are the items that have the most ratings and are highly ranked by other people. You can use them to find the most popular items or
-                        the most popular items in a certain category.</p>
-                </div>
-                <div class="col-xl-6 col-lg-7 col-md-5 offset-xl-2 offset-md-1 pt-4 pt-md-1 pt-lg-0">
-
-                    <div id="footer-links" class="row">
-                        <div class="d-flex justify-content-center pt-4 mt-lg-3">
-                            <a href="https://www.facebook.com" class="btn btn-icon btn-secondary btn-facebook mx-2">
-                                <i class="bx bxl-facebook"></i>
-                            </a>
-                            <a href="https://www.gmail.com" class="btn btn-icon btn-secondary btn-google mx-2">
-                                <i class="bx bxl-google"></i>
-                            </a>
-                            <a href="https://www.instagram.com" class="btn btn-icon btn-secondary btn-instagram mx-2">
-                                <i class="bx bxl-instagram"></i>
-                            </a>
-
-                            <a href="https://www.youtube.com" class="btn btn-icon btn-secondary btn-youtube mx-2">
-                                <i class="bx bxl-youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+          <div class="row pb-5">
+            <div class="col-lg-4 col-md-6">
+              <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
+                <img src="assets/favicon/05.jpg" width="47" alt="RATE">
+                RATE
+              </div>
+              <p class="fs-sm text-light opacity-70 pb-lg-3 mb-4">Visit us to find items that have the most ratings, and rank the ones you want to see.<br><br>These are the items that have the most ratings and are highly ranked by other people. Check out the featured blogs and choose out the best things for you.</p>
             </div>
+            <div class="col-xl-6 col-lg-7 col-md-5 offset-xl-2 offset-md-1 pt-4 pt-md-1 pt-lg-0">
+              <div id="footer-links" class="row">
+                <div class="col-lg-4">
+                  <h6 class="mb-2">
+                    <a href="#useful-links" class="d-block text-dark dropdown-toggle d-lg-none py-2" data-bs-toggle="collapse">Useful Links</a>
+                  </h6>
+                  <div id="useful-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
+                    <ul class="flex-column pb-lg-1 mb-lg-3">
+                      <li class="nav-item"><a href="index.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Home</a><br/></li>
+                      <li class="nav-item"><a href="progress.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Travel</a><br/></li>
+                      <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">About</a><br></li>
+                      <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Contact</a></li>
+                    </ul>
+                    <ul class="flex-column mb-2 mb-lg-0">
+                      <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Terms &amp; Conditions</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Privacy Policy</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-lg-3">
+                  <h6 class="mb-2">
+                    <a href="#social-links" class="d-block text-dark dropdown-toggle d-lg-none py-2" data-bs-toggle="collapse">Socials</a>
+                  </h6>
+                  <div id="social-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
+                    <ul class="flex-column mb-2 mb-lg-0">
+                      <li class="nav-item"><a href="https://www.facebook.com" class="nav-link d-inline-block px-0 pt-1 pb-2">Facebook </a></li>
+                      <li class="nav-item"><a href="https://www.youtube.com" class="nav-link d-inline-block px-0 pt-1 pb-2" >Youtube</a></li>
+                      <li class="nav-item"><a href="https://www.twitter.com" class="nav-link d-inline-block px-0 pt-1 pb-2">Twitter</a></li>
+                      <li class="nav-item"><a href="https://www.instagram.com" class="nav-link d-inline-block px-0 pt-1 pb-2">Instagram</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-lg-5 pt-2 pt-lg-0">
+                  <h6 class="mb-2">Contact Us</h6>
+                  <a href="mailto:email@example.com" class="fw-medium">email@example.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
         </div>
-    </footer>
+      </footer>
 
 
     <!-- Back to top button -->
@@ -358,8 +487,8 @@
 
     <!-- Vendor Scripts -->
     <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    
+
 
     <!-- Main Theme Script -->
     <script src="assets/js/theme.min.js"></script>

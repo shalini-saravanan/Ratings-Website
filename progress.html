@@ -65,10 +65,6 @@
             z-index: 9999;
         }
         
-        .dark-mode .page-loading {
-            background-color: #0b0f19;
-        }
-        
         .page-loading.active {
             opacity: 1;
             visibility: visible;
@@ -98,11 +94,6 @@
             color: #9397ad;
         }
         
-        .dark-mode .page-loading-inner>span {
-            color: #fff;
-            opacity: .6;
-        }
-        
         .page-spinner {
             display: inline-block;
             width: 2.75rem;
@@ -116,10 +107,6 @@
             animation: spinner .75s linear infinite;
         }
         
-        .dark-mode .page-spinner {
-            border-color: rgba(255, 255, 255, .4);
-            border-right-color: transparent;
-        }
         
         @-webkit-keyframes spinner {
             100% {
@@ -136,28 +123,9 @@
         }
     </style>
 
-    <!-- Theme mode -->
-    <script>
-        let mode = window.localStorage.getItem('mode'),
-            root = document.getElementsByTagName('html')[0];
-        if (mode !== null && mode === 'dark') {
-            root.classList.add('dark-mode');
-            var src = "https://cse.google.com/cse.js?cx=91b1e72ed013b451a";
-            //addScript(src);
-            console.log("dark");
-        } else {
-            root.classList.remove('dark-mode');
-        }
-        //addScript("https://cse.google.com/cse.js?cx=91b1e72ed013b451a");
-        function addScript(src) {
-            var s = document.createElement('script');
-            s.setAttribute('src', src);
-            s.setAttribute('async', 'async');
-            document.head.appendChild(s);
-        }
+    <script async src="https://cse.google.com/cse.js?cx=5c2828add8b05a012">
     </script>
-    <!-- <script src="https://cse.google.com/cse.js?cx=91b1e72ed013b451a"></script>
-     -->
+   
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
     <!-- Page loading scripts -->
@@ -175,6 +143,7 @@
 
     <!--CheckBox Scripts-->
     <script>
+   
         // function searchFunc() {
         //     var txtVal;
         //     input = document.getElementById("myInput");
@@ -195,9 +164,32 @@
 
         // }
 
+        function funb() {
+            if (navigator.share) {
+                navigator.share({
+  
+                    title: 'Top Travel Destinations',
+                    url: 'https://travelratingsv1.b-cdn.net/'
+                }).then(() => {
+                    console.log('Thanks for sharing!');
+                }).catch(err => {
+  
+                    console.log(
+                    "Error while using Web share API:");
+                    console.log(err);
+                });
+            } else {
+                window.alert("Browser doesn't support sharing !");
+            }
+        }
         function cpyFunc() {
             const cpyText = document.querySelectorAll(".myText")[0];
             navigator.clipboard.writeText(cpyText.innerText);
+            const copyBtn = document.getElementById("cpyButton");
+            copyBtn.blur();
+            
+            
+            
         }
 
         function removeCheck(obj) {
@@ -206,10 +198,48 @@
             checkBox[obj.value].checked = false;
             myfunc();
 
-        }
 
+        }
+        function myfunc2() {
+            window.arr = [];
+            
+            window.divs = document.getElementById("itemContainer");
+
+            window.ranks = divs.querySelectorAll(".rank");
+            window.names = divs.querySelectorAll(".name");
+            window.percentage = divs.querySelectorAll(".percentage");
+            
+            window.textBox = document.querySelectorAll(".choices");
+            
+            for (let i = 0; i < ranks.length; i++) {
+                 arr.push([ranks[i].innerHTML, names[i].innerHTML, percentage[i].innerHTML, i]);
+              
+            }
+
+            window.text = "";
+            
+            for (let i = 0; i < arr.length; i++) {
+                      text += "<strong># &nbsp;</strong>" + arr[i][1] +
+                    "<button type = \"button\" class = \"btn-close ms-2 mb-1\" value = \"" + arr[i][3] + "\" onclick = \"myfunc3(this)\" aria-label = \"Close\"></button> &nbsp; &nbsp;";
+            }
+            window.textBox = document.querySelectorAll(".choices");
+                textBox[0].innerHTML = text;
+
+    }
+    function myfunc3(obj) {
+            arr.splice(obj.value,1);
+            text = "";
+            for (let i = 0; i < arr.length; i++) {
+                      text += "<strong># &nbsp;</strong>" + arr[i][1] +
+                    "<button type = \"button\" class = \"btn-close ms-2 mb-1\" value = \"" + arr[i][3] + "\" onClick = \"myfunc3(this)\" aria-label = \"Close\"></button> &nbsp; &nbsp;";
+            }
+            textBox[0].innerHTML = text;
+            
+    }
+        window.addEventListener("load", myfunc2);
         function myfunc() {
             var arr = [];
+            
             const divs = document.getElementById("itemContainer");
 
             const ranks = divs.querySelectorAll(".rank");
@@ -218,26 +248,31 @@
             const checkBox = divs.querySelectorAll(".checks");
 
             var textBox = document.querySelectorAll(".myText");
-
+            
             for (let i = 0; i < ranks.length; i++) {
                 if (checkBox[i].checked == true) {
                     arr.push([ranks[i].innerHTML, names[i].innerHTML, percentage[i].innerHTML, i]);
                 }
+                
             }
 
             var text = "";
+            
             for (let i = 0; i < arr.length; i++) {
 
                 /* text += "<tr><th scope= \"row \">" + (i+1) + "</th>" +
                   "<td>" + arr[i][1] + "</td><td>" + arr[i][0] + "</td><td>" +
                     arr[i][2] + "</td><td><button onClick = \"removeCheck(this)\" value = \"" + arr[i][3] + "\" class= \"btn btn-danger btn-icon\" type=\"button\">" +
                       "<i class= \"bx bx-trash\"></i></button></td></tr>"; */
-                text += "<strong># &nbsp;</strong>" + arr[i][1] +
+                    
+                      text += "<strong># &nbsp;</strong>" + arr[i][1] +
                     "<button type = \"button\" class = \"btn-close ms-2 mb-1\" value = \"" + arr[i][3] + "\" onClick = \"removeCheck(this)\" aria-label = \"Close\"></button> &nbsp; &nbsp;";
             }
+            
             for (let j = 0; j < textBox.length; j++) {
                 textBox[j].innerHTML = text;
             }
+
 
         }
     </script>
@@ -264,7 +299,7 @@
 
 
         <!-- Navbar -->
-        <header class="header navbar navbar-expand-lg bg-light shadow-sm shadow-dark-mode-none fixed-top">
+        <header class="header navbar navbar-expand-lg bg-light shadow-sm fixed-top">
             <div class="container px-3">
                 <a href="index.html" class="navbar-brand pe-3">
             RATE
@@ -288,16 +323,12 @@
                         </ul>
                     </div>
                 </div>
-                <div class="gcse-search"><i class="bx bx-search position-absolute top-50 end-0 translate-middle-y me-3 zindex-5 fs-lg"></i></div>
-                <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
-                    <input type="checkbox" class="form-check-input" id="theme-mode">
-                    <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
-                    <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
-                </div>
+                
                 <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-
+          <div class="gcse-search"></div>
+                
             </div>
         </header>
 
@@ -314,11 +345,18 @@
 
 
         <!-- Page content -->
-        <section class="container mt-4 mb-2 mb-md-4 mb-lg-5 pt-lg-2 pb-5">
+        <section class="container mt-4 mb-lg-5 pt-lg-2 pb-5">
 
             <!-- Page title + Layout switcher -->
             <div class="d-flex align-items-center justify-content-between mb-4 pb-1 pb-md-3">
-                <h1 class="mb-0 col-xl-9 col-lg-8">Tourist Destinations<br/>
+                <h1 class="mb-0 col-xl-9 col-lg-8">Tourist Destinations
+                    <a onclick="funb()" class="badge fs-sm text-nav bg-secondary text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="top" title="Share this page.."><i class="bx bx-share-alt fs-lg me-1"></i></a>
+                </h1>
+
+            </div>
+            <div class="row">
+                <div class="col-xl-9 col-lg-8">
+            <div>
                     <a class="card card-portfolio card-hover bg-transparent border-0">
                         <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
                             <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 rounded-3"></span>
@@ -330,10 +368,11 @@
                             <img src="assets/img/05.jpg" class="rounded-1" alt="Image">
                         </div>
                     </a>
-                </h1>
-
-            </div>
-            <div class="col-xl-9 col-lg-8">
+            <p class="mb-4 pb-2"><br>It is always good to plan your trip to a place that you have never been before. Do not go alone; you will surely get lost and may not have the right information. Check out the best places to visit in a foreign country
+                and make a perfect plan.<br/><br />When you are travelling, you have a ton of choices to make. You can choose your hotel, where you would like to go, where you would like to eat, how far you want to go and so on. There are so many options that it can
+                become very overwhelming. <br/>It can be good to know what to expect and what to expect from the trip. Here are some tips you can use to make the most out of your trip:</p>
+        </div>
+            <div>
                 <ul class="list-group">
                     <li class="list-group-item active"><b>Quick Links</b></li>
                     <a href="#editorsChoice" style="text-decoration: none;">
@@ -342,16 +381,31 @@
                     <a href="#mostViewed" style="text-decoration: none;">
                         <li class="list-group-item">Most viewed by Customers</li>
                     </a>
+                    
                     <a href="#viewersChoice" style="text-decoration: none;">
                         <li class="list-group-item">Viewer's Choice</li>
+                        
                     </a>
                     <a href="#reviewersChoice" style="text-decoration: none;">
                         <li class="list-group-item">Reviewer's Choice</li>
                     </a>
                 </ul>
             </div>
-            <div class="row">
-                <div id="itemContainer" class="col-xl-9 col-lg-8 itemsBatch">
+            
+                <div id="itemContainer" class="itemsBatch">
+                    <br/><br/>
+                    <div class="card card-hover textBatch">
+                        <div class="card-body">
+                            <h5 class="card-title">All Choices
+                                <button id = "cpyButton" onClick="cpyFunc()" class="btn btn-outline-info btn-icon rounded-circle" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy">
+      <i class="bx bx-copy"></i>
+    </button></h5>
+
+                            <p class="card-text fs-sm choices">
+                            </p>
+
+                        </div>
+                    </div>
                     <div id="editorsChoice">
                         <div class="d-sm-flex align-items-end justify-content-between ps-lg-2 ps-xxl-0 mt-2 mt-lg-0 pt-4 mb-n3">
                             <div class="me-4">
@@ -388,6 +442,8 @@
                         </div>
 
                         <br/><br/>
+                        
+                            
                         <div id="mostViewed"></div>
                         <br/> <br />
 
@@ -416,7 +472,80 @@
                         </div>
 
                         <br/><br/>
-                        <div id="viewersChoice"></div>
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                              <thead>
+                                <tr >
+                                  <th>✔</th>
+                                  <th>Name</th>
+                                  <th>Ranking</th>
+                                  <th>Percentage</th>
+                                </tr>
+                              </thead>
+                              <tbody id = "mySelect">
+                            <tr class="checkBox">
+                                <td><input class="form-check-input checks" onClick = "myfunc()" type="checkbox"></td>
+                                <td class="name">New Zealand</td>
+                                <td class="rank">1</td>
+                                <td class="percentage">98</td>
+                            </tr>
+                            <tr class="checkBox">
+                                <td><input class="form-check-input checks" onClick = "myfunc()" type="checkbox"></td>
+                                <td class="name">Rome</td>
+                                <td class="rank">2</td>
+                                <td class="percentage">97</td>
+                            </tr>
+                            <tr class="checkBox">
+                                <td><input class="form-check-input checks" onClick = "myfunc()" type="checkbox"></td>
+                                <td class="name">Bally</td>
+                                <td class="rank">3</td>
+                                <td class="percentage">92</td>
+                            </tr>
+                            <tr class="checkBox">
+                                <td><input class="form-check-input checks" onClick = "myfunc()" type="checkbox"></td>
+                                <td class="name">New Zealand</td>
+                                <td class="rank">1</td>
+                                <td class="percentage">98</td>
+                            </tr>
+                            <tr class="checkBox">
+                                <td><input class="form-check-input checks" onClick = "myfunc()" type="checkbox"></td>
+                                <td class="name">Rome</td>
+                                <td class="rank">2</td>
+                                <td class="percentage">97</td>
+                            </tr>
+                            <tr class="checkBox">
+                                <td><input class="form-check-input checks" onClick = "myfunc()" type="checkbox"></td>
+                                <td class="name">Bally</td>
+                                <td class="rank">3</td>
+                                <td class="percentage">92</td>
+                            </tr>
+                            <tr class="checkBox">
+                                <td><input class="form-check-input checks" onClick = "myfunc()" type="checkbox"></td>
+                                <td class="name">New Zealand</td>
+                                <td class="rank">1</td>
+                                <td class="percentage">98</td>
+                            </tr>
+                            <tr class="checkBox">
+                                <td><input class="form-check-input checks" onClick = "myfunc()" type="checkbox"></td>
+                                <td class="name">Rome</td>
+                                <td class="rank">2</td>
+                                <td class="percentage">97</td>
+                            </tr>
+                            <tr class="checkBox">
+                                <td><input class="form-check-input checks" onClick = "myfunc()" type="checkbox"></td>
+                                <td class="name">Bally</td>
+                                <td class="rank">3</td>
+                                <td class="percentage">92</td>
+                            </tr>
+                            <tr class="checkBox">
+                                <td><input class="form-check-input checks" onClick = "myfunc()" type="checkbox"></td>
+                                <td class="name">Bally</td>
+                                <td class="rank">3</td>
+                                <td class="percentage">92</td>
+                            </tr>
+                              </tbody>
+                            </table>
+                          </div>
                         <br/> <br />
 
                         <div class="card card-hover col-xl-8 col-lg-8 textBatch">
@@ -443,7 +572,81 @@
                             </div>
                         </div>
                         <br/><br/>
-                        <div id="reviewersChoice"></div>
+                       
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                              <thead>
+                                <tr >
+                                  <th>✔</th>
+                                  <th>Name</th>
+                                  <th>Ranking</th>
+                                  <th>Percentage</th>
+                                </tr>
+                              </thead>
+                              <tbody id = "mySelect">
+                            <tr class="checkBox">
+                                <td><input class="form-check-input checks" onClick = "myfunc()" type="checkbox"></td>
+                                <td class="name">New Zealand</td>
+                                <td class="rank">1</td>
+                                <td class="percentage">98</td>
+                            </tr>
+                            <tr class="checkBox">
+                                <td><input class="form-check-input checks" onClick = "myfunc()" type="checkbox"></td>
+                                <td class="name">Rome</td>
+                                <td class="rank">2</td>
+                                <td class="percentage">97</td>
+                            </tr>
+                            <tr class="checkBox">
+                                <td><input class="form-check-input checks" onClick = "myfunc()" type="checkbox"></td>
+                                <td class="name">Bally</td>
+                                <td class="rank">3</td>
+                                <td class="percentage">92</td>
+                            </tr>
+                            <tr class="checkBox">
+                                <td><input class="form-check-input checks" onClick = "myfunc()" type="checkbox"></td>
+                                <td class="name">New Zealand</td>
+                                <td class="rank">1</td>
+                                <td class="percentage">98</td>
+                            </tr>
+                            <tr class="checkBox">
+                                <td><input class="form-check-input checks" onClick = "myfunc()" type="checkbox"></td>
+                                <td class="name">Rome</td>
+                                <td class="rank">2</td>
+                                <td class="percentage">97</td>
+                            </tr>
+                            <tr class="checkBox">
+                                <td><input class="form-check-input checks" onClick = "myfunc()" type="checkbox"></td>
+                                <td class="name">Bally</td>
+                                <td class="rank">3</td>
+                                <td class="percentage">92</td>
+                            </tr>
+                            <tr class="checkBox">
+                                <td><input class="form-check-input checks" onClick = "myfunc()" type="checkbox"></td>
+                                <td class="name">New Zealand</td>
+                                <td class="rank">1</td>
+                                <td class="percentage">98</td>
+                            </tr>
+                            <tr class="checkBox">
+                                <td><input class="form-check-input checks" onClick = "myfunc()" type="checkbox"></td>
+                                <td class="name">Rome</td>
+                                <td class="rank">2</td>
+                                <td class="percentage">97</td>
+                            </tr>
+                            <tr class="checkBox">
+                                <td><input class="checks" onClick = "myfunc()" type="checkbox"></td>
+                                <td class="name">Bally</td>
+                                <td class="rank">3</td>
+                                <td class="percentage">92</td>
+                            </tr>
+                            <tr class="checkBox">
+                                <td><input class=" checks" onClick = "myfunc()" type="checkbox"></td>
+                                <td class="name">Bally</td>
+                                <td class="rank">3</td>
+                                <td class="percentage">92</td>
+                            </tr>
+                              </tbody>
+                            </table>
+                          </div>
                         <br/> <br />
 
                         <div class="card card-hover col-xl-8 col-lg-8 textBatch">
@@ -464,68 +667,89 @@
 
 
                 </div>
-
-                <!-- Pagination 
-        <ul>
-            <div class="holder pagination justify-content-center pt-lg-3 pt-1">
-            <li class="page-item">
-              <a class="page-link">
-                <i class="bx bx-chevron-left mx-n1"></i>
-              </a>
-            </li>
-            <li class="page-item active d-none d-sm-block" aria-current="page">
-              <span class="page-link">1
-                <span class="visually-hidden"></span>
-              </span>
-            </li>
-            <li class="page-item">
-              <a class="page-link">
-                <i class="bx bx-chevron-right mx-n1"></i>
-              </a>
-            </li>
-        </div>
-          </ul> -->
-
-                <br/>
-                <br/>
-                <!--
-          <div class = "row ">
-            <div class="card card-hover col-xl-6 col-lg-6">
-              <div class="card-body">
-                <h5 class="card-title">View your choices here... 
-                  <button onClick = "cpyFunc()" class="btn btn-outline-info btn-icon rounded-circle" type="button">
-                  <i class="bx bx-copy"></i>
-                </button></h5>
-                
-                <p class="card-text fs-sm" id = "myText">
-                </p>
-                
-              </div>
             </div>
-            
-              <div class = "col-xl-9 col-lg-8">
-              <h6>Your Selections will be dislpayed here!</h6>
-              <div class="table-responsive">
-                <table class="table table-striped">
-                  <thead>
-                    <tr>
-                      <th>#</th>
-                      <th>Name</th>
-                      <th>Ranking</th>
-                      <th>Percentage</th>
-                      <th>Remove</th>
-                    </tr>
-                  </thead>
-                  <tbody id = "mySelect">
+            <aside class="col-xl-3 col-lg-4">
+                <div class="offcanvas-lg offcanvas-end" id="blog-sidebar" tabindex="-1">
+    
+                  <!-- Header -->
+                  <div class="offcanvas-header border-bottom">
+                    <h3 class="offcanvas-title fs-lg">Sidebar</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#blog-sidebar"></button>
+                  </div>
+    
+                  <!-- Body -->
+                  <div class="offcanvas-body">
+                    <!-- Popular posts -->
+                    <div class="card card-body border-0 position-relative mb-4">
+                      <span class="position-absolute top-0 start-0 w-100 h-100 bg-gradient-primary opacity-10 rounded-3"></span>
+                      <div class="position-relative zindex-2">
+                        <h3 class="h5">People also visit</h3>
+                        <ul class="list-unstyled mb-0">
+                          <li class="border-bottom pb-3 mb-3">
+                            <h4 class="h6 mb-2">
+                              <a href="progress.html">Top travel destinations that you must visit</a>
+                            </h4>
+                            <div class="d-flex align-items-center text-muted pt-1">
+                              <a href="progress.html" ><div class="fs-xs border-end pe-3 me-3">View Contents</div></a>
+                              <div class="d-flex align-items-center">
+                                <i class="bx bx-share-alt fs-base me-1"></i>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="border-bottom pb-3 mb-3">
+                            <h4 class="h6 mb-2">
+                              <a href="#">Let your taste buds experience the feel of world's best foods</a>
+                            </h4>
+                            <div class="d-flex align-items-center text-muted pt-1">
+                              <a href="#" ><div class="fs-xs border-end pe-3 me-3">View Contents</div></a>
+                              <div class="d-flex align-items-center">
+                                <i class="bx bx-share-alt fs-base me-1"></i>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <h4 class="h6 mb-2">
+                              <a href="#">Top paid jobs in 2022 | Software tops the list</a>
+                            </h4>
+                            <div class="d-flex align-items-center text-muted pt-1">
+                              <a href="#" ><div class="fs-xs border-end pe-3 me-3">View Contents</div></a>
+                              <div class="d-flex align-items-center">
+                                <i class="bx bx-share-alt fs-base me-1"></i>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+    
                     
-                  </tbody>
-                </table>
-              </div>
+    
+                    <!-- Follow Us -->
+                    <div class="card mb-4">
+                      <div class="card-body">
+                        <h5 class="mb-4">Follow Us</h5>
+                        <a href="https://www.youtube.com" class="btn btn-icon btn-sm btn-secondary btn-youtube me-2 mb-2">
+                          <i class="bx bxl-youtube"></i>
+                        </a>
+                        <a href="https://www.facebook.com" class="btn btn-icon btn-sm btn-secondary btn-facebook me-2 mb-2">
+                          <i class="bx bxl-facebook"></i>
+                        </a>
+                        <a href="#" class="btn btn-icon btn-sm btn-secondary btn-twitter me-2 mb-2">
+                          <i class="bx bxl-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com" class="btn btn-icon btn-sm btn-secondary btn-instagram me-2 mb-2">
+                          <i class="bx bxl-instagram"></i>
+                        </a>
+                      </div>
+                    </div>
+    
+                  </div>
+                </div>
+              </aside>
             </div>
-          
-          </div>
-          
-          -->
+                <br/>
+                <br/>
+                
         </section>
 
     </main>
@@ -533,38 +757,58 @@
 
 
     <!-- Footer -->
-    <footer class="footer dark-mode bg-dark pt-5 pb-4 pb-lg-5">
+    <footer class="footer dark-mode bg-dark border-top border-light pt-5 pb-4 pb-lg-5">
         <div class="container pt-lg-4">
-            <div class="row pb-5">
-                <div class="col-lg-4 col-md-6">
-                    <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
-                        RATE
-                    </div>
-                    <p class="fs-sm text-light opacity-70 pb-lg-3 mb-4">Find the best things in the world. E X P L O R E the world with us! </p>
-                </div>
-                <div class="col-xl-6 col-lg-7 col-md-5 offset-xl-2 offset-md-1 pt-4 pt-md-1 pt-lg-0">
-
-                    <div id="footer-links" class="row">
-                        <div class="d-flex justify-content-center pt-4 mt-lg-3">
-                            <a href="https://www.facebook.com" class="btn btn-icon btn-secondary btn-facebook mx-2">
-                                <i class="bx bxl-facebook"></i>
-                            </a>
-                            <a href="https://www.gmail.com" class="btn btn-icon btn-secondary btn-google mx-2">
-                                <i class="bx bxl-google"></i>
-                            </a>
-                            <a href="https://www.instagram.com" class="btn btn-icon btn-secondary btn-instagram mx-2">
-                                <i class="bx bxl-instagram"></i>
-                            </a>
-
-                            <a href="https://www.youtube.com" class="btn btn-icon btn-secondary btn-youtube mx-2">
-                                <i class="bx bxl-youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+          <div class="row pb-5">
+            <div class="col-lg-4 col-md-6">
+              <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
+                <img src="assets/favicon/05.jpg" width="47" alt="RATE">
+                RATE
+              </div>
+              <p class="fs-sm text-light opacity-70 pb-lg-3 mb-4">Visit us to find items that have the most ratings, and rank the ones you want to see.<br><br>These are the items that have the most ratings and are highly ranked by other people. Check out the featured blogs and choose out the best things for you.</p>
             </div>
+            <div class="col-xl-6 col-lg-7 col-md-5 offset-xl-2 offset-md-1 pt-4 pt-md-1 pt-lg-0">
+              <div id="footer-links" class="row">
+                <div class="col-lg-4">
+                  <h6 class="mb-2">
+                    <a href="#useful-links" class="d-block text-dark dropdown-toggle d-lg-none py-2" data-bs-toggle="collapse">Useful Links</a>
+                  </h6>
+                  <div id="useful-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
+                    <ul class="flex-column pb-lg-1 mb-lg-3">
+                      <li class="nav-item"><a href="index.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Home</a><br/></li>
+                      <li class="nav-item"><a href="progress.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Travel</a><br/></li>
+                      <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">About</a><br></li>
+                      <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Contact</a></li>
+                    </ul>
+                    <ul class="flex-column mb-2 mb-lg-0">
+                      <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Terms &amp; Conditions</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Privacy Policy</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-lg-3">
+                  <h6 class="mb-2">
+                    <a href="#social-links" class="d-block text-dark dropdown-toggle d-lg-none py-2" data-bs-toggle="collapse">Socials</a>
+                  </h6>
+                  <div id="social-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
+                    <ul class="flex-column mb-2 mb-lg-0">
+                      <li class="nav-item"><a href="https://www.facebook.com" class="nav-link d-inline-block px-0 pt-1 pb-2">Facebook </a></li>
+                      <li class="nav-item"><a href="https://www.youtube.com" class="nav-link d-inline-block px-0 pt-1 pb-2" >Youtube</a></li>
+                      <li class="nav-item"><a href="https://www.twitter.com" class="nav-link d-inline-block px-0 pt-1 pb-2">Twitter</a></li>
+                      <li class="nav-item"><a href="https://www.instagram.com" class="nav-link d-inline-block px-0 pt-1 pb-2">Instagram</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-lg-5 pt-2 pt-lg-0">
+                  <h6 class="mb-2">Contact Us</h6>
+                  <a href="mailto:email@example.com" class="fw-medium">email@example.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
         </div>
-    </footer>
+      </footer>
 
 
     <!-- Back to top button -->
@@ -576,7 +820,6 @@
 
     <!-- Vendor Scripts -->
     <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 
     <!-- Main Theme Script -->
     <script src="assets/js/theme.min.js"></script>
