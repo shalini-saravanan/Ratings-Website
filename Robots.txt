@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: 
+Disallow: /assets/
+Disallow: /assets/js/
+Disallow: /assets/img/
+Disallow: /assets/vendor/
+Sitemap: https://ratings-page.b-cdn.net/sitemap.xml
