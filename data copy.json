@@ -1,0 +1,303 @@
+{
+    "ratings": [{
+            "name": "Abiquiu Delaware",
+            "ratings": 97,
+            "views": 179042,
+            "choiceBy": "reviewersChoice"
+        },
+        {
+            "name": "Orin Utah",
+            "ratings": 87,
+            "views": 913849,
+            "choiceBy": "viewersChoice"
+        },
+        {
+            "name": "Finderne Alaska",
+            "ratings": 95,
+            "views": 294958,
+            "choiceBy": "viewersChoice"
+        },
+        {
+            "name": "Winston Illinois",
+            "ratings": 42,
+            "views": 14022,
+            "choiceBy": "editorsChoice"
+        },
+        {
+            "name": "Helen Louisiana",
+            "ratings": 73,
+            "views": 305386,
+            "choiceBy": "viewersChoice"
+        },
+        {
+            "name": "Fairview Puerto Rico",
+            "ratings": 42,
+            "views": 570026,
+            "choiceBy": "editorsChoice"
+        },
+        {
+            "name": "Biddle Massachusetts",
+            "ratings": 51,
+            "views": 954735,
+            "choiceBy": "viewersChoice"
+        },
+        {
+            "name": "Winfred Oregon",
+            "ratings": 67,
+            "views": 350409,
+            "choiceBy": "editorsChoice"
+        },
+        {
+            "name": "Lodoga Montana",
+            "ratings": 53,
+            "views": 266052,
+            "choiceBy": "viewersChoice"
+        },
+        {
+            "name": "Salix Oklahoma",
+            "ratings": 47,
+            "views": 560424,
+            "choiceBy": "reviewersChoice"
+        },
+        {
+            "name": "Limestone Marshall Islands",
+            "ratings": 42,
+            "views": 618265,
+            "choiceBy": "viewersChoice"
+        },
+        {
+            "name": "Moraida North Dakota",
+            "ratings": 58,
+            "views": 964270,
+            "choiceBy": "viewersChoice"
+        },
+        {
+            "name": "Dola Hawaii",
+            "ratings": 91,
+            "views": 951268,
+            "choiceBy": "reviewersChoice"
+        },
+        {
+            "name": "Odessa District Of Columbia",
+            "ratings": 53,
+            "views": 481859,
+            "choiceBy": "reviewersChoice"
+        },
+        {
+            "name": "Stockwell Iowa",
+            "ratings": 82,
+            "views": 221174,
+            "choiceBy": "editorsChoice"
+        },
+        {
+            "name": "Marenisco North Carolina",
+            "ratings": 42,
+            "views": 757521,
+            "choiceBy": "reviewersChoice"
+        },
+        {
+            "name": "Noxen New Jersey",
+            "ratings": 44,
+            "views": 57462,
+            "choiceBy": "reviewersChoice"
+        },
+        {
+            "name": "Wauhillau South Dakota",
+            "ratings": 70,
+            "views": 557302,
+            "choiceBy": "viewersChoice"
+        },
+        {
+            "name": "Wilmington Nebraska",
+            "ratings": 94,
+            "views": 756370,
+            "choiceBy": "editorsChoice"
+        },
+        {
+            "name": "Madaket New Hampshire",
+            "ratings": 52,
+            "views": 167249,
+            "choiceBy": "reviewersChoice"
+        },
+        {
+            "name": "Edneyville Kansas",
+            "ratings": 44,
+            "views": 689681,
+            "choiceBy": "reviewersChoice"
+        },
+        {
+            "name": "Detroit New York",
+            "ratings": 79,
+            "views": 369295,
+            "choiceBy": "viewersChoice"
+        },
+        {
+            "name": "Martell Alabama",
+            "ratings": 81,
+            "views": 783046,
+            "choiceBy": "viewersChoice"
+        },
+        {
+            "name": "Efland Washington",
+            "ratings": 90,
+            "views": 836043,
+            "choiceBy": "reviewersChoice"
+        },
+        {
+            "name": "Gilgo Indiana",
+            "ratings": 67,
+            "views": 137596,
+            "choiceBy": "editorsChoice"
+        },
+        {
+            "name": "Belgreen South Carolina",
+            "ratings": 61,
+            "views": 642924,
+            "choiceBy": "editorsChoice"
+        },
+        {
+            "name": "Tilden Virginia",
+            "ratings": 64,
+            "views": 498534,
+            "choiceBy": "editorsChoice"
+        },
+        {
+            "name": "Curtice Minnesota",
+            "ratings": 91,
+            "views": 693586,
+            "choiceBy": "reviewersChoice"
+        },
+        {
+            "name": "Weedville West Virginia",
+            "ratings": 40,
+            "views": 398166,
+            "choiceBy": "editorsChoice"
+        },
+        {
+            "name": "Fillmore Pennsylvania",
+            "ratings": 96,
+            "views": 794179,
+            "choiceBy": "viewersChoice"
+        },
+        {
+            "name": "Sehili Missouri",
+            "ratings": 53,
+            "views": 983868,
+            "choiceBy": "reviewersChoice"
+        },
+        {
+            "name": "Blende Kentucky",
+            "ratings": 61,
+            "views": 140476,
+            "choiceBy": "reviewersChoice"
+        },
+        {
+            "name": "Carlton American Samoa",
+            "ratings": 54,
+            "views": 881280,
+            "choiceBy": "editorsChoice"
+        },
+        {
+            "name": "Riner California",
+            "ratings": 82,
+            "views": 863798,
+            "choiceBy": "editorsChoice"
+        },
+        {
+            "name": "Foxworth Northern Mariana Islands",
+            "ratings": 98,
+            "views": 465537,
+            "choiceBy": "editorsChoice"
+        },
+        {
+            "name": "Warsaw Maryland",
+            "ratings": 68,
+            "views": 238979,
+            "choiceBy": "editorsChoice"
+        },
+        {
+            "name": "Lisco Virgin Islands",
+            "ratings": 50,
+            "views": 164688,
+            "choiceBy": "editorsChoice"
+        },
+        {
+            "name": "Yogaville Ohio",
+            "ratings": 40,
+            "views": 31534,
+            "choiceBy": "editorsChoice"
+        },
+        {
+            "name": "Lookingglass Tennessee",
+            "ratings": 79,
+            "views": 454749,
+            "choiceBy": "viewersChoice"
+        },
+        {
+            "name": "Tibbie Arkansas",
+            "ratings": 90,
+            "views": 496387,
+            "choiceBy": "viewersChoice"
+        },
+        {
+            "name": "Wikieup Florida",
+            "ratings": 71,
+            "views": 721289,
+            "choiceBy": "viewersChoice"
+        },
+        {
+            "name": "Greenwich Nevada",
+            "ratings": 67,
+            "views": 138301,
+            "choiceBy": "viewersChoice"
+        },
+        {
+            "name": "Bladensburg Michigan",
+            "ratings": 62,
+            "views": 132276,
+            "choiceBy": "reviewersChoice"
+        },
+        {
+            "name": "Graniteville Guam",
+            "ratings": 75,
+            "views": 568762,
+            "choiceBy": "reviewersChoice"
+        },
+        {
+            "name": "Fairacres Vermont",
+            "ratings": 68,
+            "views": 625020,
+            "choiceBy": "editorsChoice"
+        },
+        {
+            "name": "Thermal Wyoming",
+            "ratings": 56,
+            "views": 692962,
+            "choiceBy": "viewersChoice"
+        },
+        {
+            "name": "Delshire Texas",
+            "ratings": 41,
+            "views": 781761,
+            "choiceBy": "viewersChoice"
+        },
+        {
+            "name": "Selma Rhode Island",
+            "ratings": 73,
+            "views": 837095,
+            "choiceBy": "editorsChoice"
+        },
+        {
+            "name": "Callaghan Palau",
+            "ratings": 40,
+            "views": 546047,
+            "choiceBy": "reviewersChoice"
+        },
+        {
+            "name": "Bascom Wisconsin",
+            "ratings": 69,
+            "views": 724055,
+            "choiceBy": "editorsChoice"
+        }
+    ]
+}
