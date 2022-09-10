@@ -15,25 +15,25 @@ def add_content(id, content):
         f_output.write(soup.prettify("utf-8"))
 
 
-def getDoc(name, ratings) -> str:
+def getDoc(name, ratings, rank) -> str:
 
     res = """<tr class="checkBox">
                 <td><input class="form-check-input checks" onClick="myfunc()" type="checkbox"></td>
                 <td class="name">{0}</td>
-                <td class="rank">1</td>
+                <td class="rank">{2}</td>
                 <td class="percentage">{1}</td>
-            </tr>""".format(name, ratings)
+            </tr>""".format(name, ratings, rank)
 
     return res
 
 
-def getDocViews(name, views) -> str:
+def getDocViews(name, views, rank) -> str:
     res = """<tr class="checkBox">
                 <td><input class="form-check-input checks" onClick="myfunc()" type="checkbox"></td>
                 <td class="name">{0}</td>
-                <td class="rank">1</td>
+                <td class="rank">{2}</td>
                 <td class="percentage">{1}</td>
-            </tr>""".format(name, views)
+            </tr>""".format(name, views, rank)
     return res
 
 
@@ -70,17 +70,24 @@ with open("/home/sugan/Documents/GitHub/Ratings-Website/data.json", "r") as js_f
     views = sorted(
         views, key=lambda x: int(x["views"]), reverse=True
     )[:10]
+    rank = 1
 
     for i in editorsChoice:
-        editor = editor + getDoc(i["name"], i["ratings"])
+        editor = editor + getDoc(i["name"], i["ratings"], rank)
+        rank = rank + 1
+    rank = 1
     for i in viewersChoice:
-        viewers = viewers + getDoc(i["name"], i["ratings"])
+        viewers = viewers + getDoc(i["name"], i["ratings"], rank)
+        rank = rank + 1
+    rank = 1
     for i in reviewersChoice:
-        reviewer = reviewer + getDoc(i["name"], i["ratings"])
+        reviewer = reviewer + getDoc(i["name"], i["ratings"], rank)
+        rank = rank + 1
+    rank = 1
 
     for i in views:
-        view = view + getDocViews(i["name"], i["views"])
-    print(view)
+        view = view + getDocViews(i["name"], i["views"], rank)
+        rank = rank + 1
 
     add_content("viewers", viewers)
     add_content("view", view)
