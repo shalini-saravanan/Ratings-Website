@@ -82,4 +82,7 @@ with open("/home/sugan/Documents/GitHub/Ratings-Website/data.json", "r") as js_f
         view = view + getDocViews(i["name"], i["views"])
     print(view)
 
-    # add_content("viewers", viewers)
+    add_content("viewers", viewers)
+    add_content("view", view)
+    add_content("editor", editor)
+    add_content("reviewer", reviewer)
