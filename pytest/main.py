@@ -65,6 +65,8 @@ editor = ""
 viewers = ""
 reviewer = ""
 view = ""
+os.system('cp ./pytest/template.html ./progress.html')
+
 with open("/home/sugan/Documents/GitHub/Ratings-Website/data.json", "r") as js_file:
     data = json.load(js_file)
     editorsChoice = []
