@@ -38,10 +38,10 @@ def getDocViews(name, views, mx) -> str:
            </div>
            <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
             <div class="progress mb-3">
-           <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: ({2})%" aria-valuenow="{1}" aria-valuemin="0" aria-valuemax="{2}">${1}</div>
+           <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: {2}%" aria-valuenow="{2}%" aria-valuemin="0" aria-valuemax="{3}">${1}</div>
             </div>
            </div>
-           </div>""".format(name, views, perc)
+           </div>""".format(name, views, perc, mx)
 
     return res
 
