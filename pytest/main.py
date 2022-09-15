@@ -10,7 +10,7 @@ def add_content(id, content):
 
     old = soup.find("tbody", {"id": id})
     txt = bs(content, "html.parser")
-    new = old.find(text=re.compile("#")).replace_with(txt)
+    new = old.find(text=re.compile(".*")).replace_with(txt)
     with open("/home/sugan/Documents/GitHub/Ratings-Website/progress.html", "wb") as f_output:
         f_output.write(soup.prettify("utf-8"))
 
@@ -116,5 +116,5 @@ with open("/home/sugan/Documents/GitHub/Ratings-Website/data.json", "r") as js_f
 
     add_content("viewers", viewers)
     add_content("view", view)
-    add_content("editor", editor)
-    add_content("reviewer", reviewer)
+    add_content_bar("editor", editor)
+    add_content_bar("reviewer", reviewer)
