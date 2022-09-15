@@ -15,7 +15,7 @@ def add_content(id, content):
         f_output.write(soup.prettify("utf-8"))
 
 
-def getDoc(name, ratings, rank) -> str:
+def getDocTable(name, ratings, rank) -> str:
 
     res = """<tr class="checkBox">
                 <td><input class="form-check-input checks" onClick="myfunc()" type="checkbox"></td>
@@ -73,15 +73,15 @@ with open("/home/sugan/Documents/GitHub/Ratings-Website/data.json", "r") as js_f
     rank = 1
 
     for i in editorsChoice:
-        editor = editor + getDoc(i["name"], i["ratings"], rank)
+        editor = editor + getDocTable(i["name"], i["ratings"], rank)
         rank = rank + 1
     rank = 1
     for i in viewersChoice:
-        viewers = viewers + getDoc(i["name"], i["ratings"], rank)
+        viewers = viewers + getDocTable(i["name"], i["ratings"], rank)
         rank = rank + 1
     rank = 1
     for i in reviewersChoice:
-        reviewer = reviewer + getDoc(i["name"], i["ratings"], rank)
+        reviewer = reviewer + getDocTable(i["name"], i["ratings"], rank)
         rank = rank + 1
     rank = 1
 
