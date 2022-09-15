@@ -28,6 +28,7 @@ def getDocTable(name, ratings, rank) -> str:
 
 
 def getDocViews(name, views, mx) -> str:
+    perc = (views/mx)*100
 
     res = """<div class="row items">
            <div class="col-xl-4 col-lg-4">
@@ -37,10 +38,10 @@ def getDocViews(name, views, mx) -> str:
            </div>
            <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
             <div class="progress mb-3">
-           <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: (({1}/{2})*100)%" aria-valuenow="{1}" aria-valuemin="0" aria-valuemax="{2}">${1}</div>
+           <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: ({2})%" aria-valuenow="{1}" aria-valuemin="0" aria-valuemax="{2}">${1}</div>
             </div>
            </div>
-           </div>""".format(name, views, mx)
+           </div>""".format(name, views, perc)
 
     return res
 
@@ -53,7 +54,7 @@ def getDoc(name, percentage) -> str:
             </div>
             <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
             <div class="progress mb-3">
-            <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">{1}%</div>
+            <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: {1}%" aria-valuenow="{1}" aria-valuemin="0" aria-valuemax="100">{1}%</div>
             </div>
             </div>
             </div>""".format(name, percentage)
