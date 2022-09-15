@@ -45,6 +45,21 @@ def getDocViews(name, views, mx) -> str:
     return res
 
 
+def getDoc(name, percentage) -> str:
+    res = """<div class = "row items">
+            <div class="col-xl-4 col-lg-4" >
+            <input class="form-check-input checks" onClick = "myfunc()" type="checkbox">
+            <strong class = "name">{0}&nbsp;</strong>
+            </div>
+            <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
+            <div class="progress mb-3">
+            <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">{1}%</div>
+            </div>
+            </div>
+            </div>""".format(name, percentage)
+    return res
+
+
 editor = ""
 viewers = ""
 reviewer = ""
@@ -87,12 +102,10 @@ with open("/home/sugan/Documents/GitHub/Ratings-Website/data.json", "r") as js_f
     for i in reviewersChoice:
         reviewer = reviewer + getDocTable(i["name"], i["ratings"], rank)
         rank = rank + 1
-    rank = 1
 
     for i in editorsChoice:
-        editor = editor + getDocTable(i["name"], i["ratings"], rank)
+        editor = editor + getDoc(i["name"], i["ratings"])
         rank = rank + 1
-    rank = 1
 
     mx = views[0]["views"]
     for i in views:
@@ -100,7 +113,6 @@ with open("/home/sugan/Documents/GitHub/Ratings-Website/data.json", "r") as js_f
             mx = i["views"]
     for i in views:
         view = view + getDocViews(i["name"], i["views"], mx)
-        rank = rank + 1
 
     add_content("viewers", viewers)
     add_content("view", view)
