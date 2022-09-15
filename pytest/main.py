@@ -115,6 +115,6 @@ with open("/home/sugan/Documents/GitHub/Ratings-Website/data.json", "r") as js_f
         view = view + getDocViews(i["name"], i["views"], mx)
 
     add_content("viewers", viewers, "tbody")
-    add_content("view", view, "tobody")
-    add_content_bar("editor", editor, "div")
-    add_content_bar("reviewer", reviewer, "div")
+    add_content("reviewer", reviewer, "tbody")
+    add_content("editor", editor, "div")
+    add_content("view", view, "div")
