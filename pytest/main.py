@@ -27,13 +27,21 @@ def getDocTable(name, ratings, rank) -> str:
     return res
 
 
-def getDocViews(name, views, rank) -> str:
-    res = """<tr class="checkBox">
-                <td><input class="form-check-input checks" onClick="myfunc()" type="checkbox"></td>
-                <td class="name">{0}</td>
-                <td class="rank">{2}</td>
-                <td class="percentage">{1}</td>
-            </tr>""".format(name, views, rank)
+def getDocViews(name, views, mx) -> str:
+
+    res = """<div class="row items">
+           <div class="col-xl-4 col-lg-4">
+           <input class="form-check-input checks" onClick="myfunc()" type="checkbox">
+           <a class="badge fs-sm text-nav bg-secondary text-decoration-none rank"># </a>
+           <strong class="name">{0} &nbsp;</strong>
+           </div>
+           <div class="fs-sm mb-2 checkBox col-xl-8 col-lg-8">
+            <div class="progress mb-3">
+           <div class="progress-bar bg-gradient-primary percentage" role="progressbar" style="width: (({1}/{2})*100)%" aria-valuenow="{1}" aria-valuemin="0" aria-valuemax="{2}">${1}</div>
+            </div>
+           </div>
+           </div>""".format(name, views, mx)
+
     return res
 
 
@@ -72,10 +80,6 @@ with open("/home/sugan/Documents/GitHub/Ratings-Website/data.json", "r") as js_f
     )[:10]
     rank = 1
 
-    for i in editorsChoice:
-        editor = editor + getDocTable(i["name"], i["ratings"], rank)
-        rank = rank + 1
-    rank = 1
     for i in viewersChoice:
         viewers = viewers + getDocTable(i["name"], i["ratings"], rank)
         rank = rank + 1
@@ -85,8 +89,17 @@ with open("/home/sugan/Documents/GitHub/Ratings-Website/data.json", "r") as js_f
         rank = rank + 1
     rank = 1
 
+    for i in editorsChoice:
+        editor = editor + getDocTable(i["name"], i["ratings"], rank)
+        rank = rank + 1
+    rank = 1
+
+    mx = views[0]["views"]
     for i in views:
-        view = view + getDocViews(i["name"], i["views"], rank)
+        if mx < i["views"]:
+            mx = i["views"]
+    for i in views:
+        view = view + getDocViews(i["name"], i["views"], mx)
         rank = rank + 1
 
     add_content("viewers", viewers)
