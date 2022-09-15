@@ -4,11 +4,11 @@ import os
 import re
 
 
-def add_content(id, content):
+def add_content(id, content, tag):
     html = open("/home/sugan/Documents/GitHub/Ratings-Website/progress.html")
     soup = bs(html, 'html.parser')
 
-    old = soup.find("tbody", {"id": id})
+    old = soup.find(tag, {"id": id})
     txt = bs(content, "html.parser")
     new = old.find(text=re.compile("#")).replace_with(txt)
     with open("/home/sugan/Documents/GitHub/Ratings-Website/progress.html", "wb") as f_output:
@@ -114,7 +114,7 @@ with open("/home/sugan/Documents/GitHub/Ratings-Website/data.json", "r") as js_f
     for i in views:
         view = view + getDocViews(i["name"], i["views"], mx)
 
-    add_content("viewers", viewers)
-    add_content("view", view)
-    add_content_bar("editor", editor)
-    add_content_bar("reviewer", reviewer)
+    add_content("viewers", viewers, "tbody")
+    add_content("view", view, "tobody")
+    add_content_bar("editor", editor, "div")
+    add_content_bar("reviewer", reviewer, "div")
