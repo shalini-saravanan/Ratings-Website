@@ -10,8 +10,6 @@ A static web page with user attractive UI/UX design and best SEO practices where
 - 24/7 User support through mail and call available
 - Best SEO Practices
 
-![image](https://user-images.githubusercontent.com/79892397/193504479-bafaf229-80c6-49ec-a291-1cab20b02065.png)
-
 
 ## Updating Page Contents
 It is a static webpage where you can add, delete or update the contents by changing the data of the json file as per your need. Steps are as follows:
